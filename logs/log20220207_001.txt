@@ -1,0 +1,1271 @@
+2022-02-07 15:14:22.085 +03:00 [FTL] Unable to start Kestrel.
+System.IO.IOException: Failed to bind to address http://127.0.0.1:5000: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+ ---> System.Net.Sockets.SocketException (10048): Only one usage of each socket address (protocol/network address/port) is normally permitted.
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.<Bind>g__BindSocket|13_0(<>c__DisplayClass13_0& )
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.<Bind>g__BindSocket|13_0(<>c__DisplayClass13_0& )
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass29_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.DefaultAddressStrategy.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(IEnumerable`1 listenOptions, AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+2022-02-07 15:14:44.280 +03:00 [FTL] Unable to start Kestrel.
+System.IO.IOException: Failed to bind to address http://127.0.0.1:5000: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+ ---> System.Net.Sockets.SocketException (10048): Only one usage of each socket address (protocol/network address/port) is normally permitted.
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.<Bind>g__BindSocket|13_0(<>c__DisplayClass13_0& )
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.<Bind>g__BindSocket|13_0(<>c__DisplayClass13_0& )
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass29_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(IEnumerable`1 listenOptions, AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+2022-02-07 15:14:55.642 +03:00 [FTL] Unable to start Kestrel.
+System.IO.IOException: Failed to bind to address http://127.0.0.1:5000: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: Only one usage of each socket address (protocol/network address/port) is normally permitted.
+ ---> System.Net.Sockets.SocketException (10048): Only one usage of each socket address (protocol/network address/port) is normally permitted.
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.<Bind>g__BindSocket|13_0(<>c__DisplayClass13_0& )
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.<Bind>g__BindSocket|13_0(<>c__DisplayClass13_0& )
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass29_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindAsync(IEnumerable`1 listenOptions, AddressBindContext context)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+2022-02-07 15:15:46.921 +03:00 [INF] Now listening on: https://localhost:5001
+2022-02-07 15:15:46.959 +03:00 [INF] Now listening on: http://localhost:5000
+2022-02-07 15:15:46.964 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-02-07 15:15:46.964 +03:00 [INF] Hosting environment: Development
+2022-02-07 15:15:46.965 +03:00 [INF] Content root path: C:\NativeKit\SignalRHost
+2022-02-07 15:15:50.236 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 15:15:50.278 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 15:15:50.298 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 15:15:51.016 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 711.6705ms
+2022-02-07 15:15:51.037 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 15:15:51.082 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Crossmatch.BioBaseException: An attempt was made to load a program with an incorrect format. (0x8007000B)
+   at Crossmatch.LSE.LseBioBaseApi.Open() in C:\NativeKit\Crossmatch\LSE\LseBioBaseApi.cs:line 44
+   at SignalRHost.Services.DeviceServices.DevicesConnected() in C:\NativeKit\SignalRHost\Services\DeviceServices.cs:line 20
+   at SignalRHost.Controllers.NativeKitController.DevicesConnected() in C:\NativeKit\SignalRHost\Controllers\NativeKitController.cs:line 25
+   at lambda_method48(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-02-07 15:15:51.165 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 500 - text/plain 930.8706ms
+2022-02-07 15:19:03.805 +03:00 [INF] Now listening on: https://localhost:5001
+2022-02-07 15:19:03.846 +03:00 [INF] Now listening on: http://localhost:5000
+2022-02-07 15:19:03.848 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-02-07 15:19:03.849 +03:00 [INF] Hosting environment: Development
+2022-02-07 15:19:03.849 +03:00 [INF] Content root path: C:\NativeKit\SignalRHost
+2022-02-07 15:19:06.562 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 15:19:06.601 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 15:19:06.617 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 15:19:06.699 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SignalRHost.Models.DeviceDetails, SignalRHost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-02-07 15:19:08.801 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 2179.0756ms
+2022-02-07 15:19:08.804 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 15:19:08.806 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 200 - application/json;+charset=utf-8 2246.6105ms
+2022-02-07 15:19:18.037 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 15:19:18.042 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 15:19:18.046 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 15:19:18.060 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SignalRHost.Models.DeviceDetails, SignalRHost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-02-07 15:19:18.062 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 15.0303ms
+2022-02-07 15:19:18.063 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 15:19:18.064 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 200 - application/json;+charset=utf-8 26.9583ms
+2022-02-07 15:19:28.061 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 15:19:28.063 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 15:19:28.064 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 15:19:28.069 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SignalRHost.Models.DeviceDetails, SignalRHost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-02-07 15:19:28.071 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 3.6384ms
+2022-02-07 15:19:28.072 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 15:19:28.074 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 200 - application/json;+charset=utf-8 13.5406ms
+2022-02-07 15:19:29.182 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 15:19:29.183 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 15:19:29.185 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 15:19:29.187 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SignalRHost.Models.DeviceDetails, SignalRHost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-02-07 15:19:29.188 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 1.0887ms
+2022-02-07 15:19:29.190 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 15:19:29.192 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 200 - application/json;+charset=utf-8 10.1479ms
+2022-02-07 16:23:18.555 +03:00 [INF] Now listening on: https://localhost:5001
+2022-02-07 16:23:18.595 +03:00 [INF] Now listening on: http://localhost:5000
+2022-02-07 16:23:18.598 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-02-07 16:23:18.599 +03:00 [INF] Hosting environment: Development
+2022-02-07 16:23:18.600 +03:00 [INF] Content root path: C:\NativeKit\SignalRHost
+2022-02-07 16:23:26.137 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 16:23:26.181 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 16:23:26.197 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 16:23:26.969 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 766.6525ms
+2022-02-07 16:23:26.987 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 16:23:27.030 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Crossmatch.BioBaseException: An attempt was made to load a program with an incorrect format. (0x8007000B)
+   at Crossmatch.LSE.LseBioBaseApi.Open() in C:\NativeKit\Crossmatch\LSE\LseBioBaseApi.cs:line 44
+   at SignalRHost.Services.DeviceServices.DevicesConnected() in C:\NativeKit\SignalRHost\Services\DeviceServices.cs:line 20
+   at SignalRHost.Controllers.NativeKitController.DevicesConnected() in C:\NativeKit\SignalRHost\Controllers\NativeKitController.cs:line 25
+   at lambda_method48(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-02-07 16:23:27.118 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 500 - text/plain 981.9780ms
+2022-02-07 16:24:21.266 +03:00 [INF] Now listening on: https://localhost:5001
+2022-02-07 16:24:21.307 +03:00 [INF] Now listening on: http://localhost:5000
+2022-02-07 16:24:21.309 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-02-07 16:24:21.310 +03:00 [INF] Hosting environment: Development
+2022-02-07 16:24:21.311 +03:00 [INF] Content root path: C:\NativeKit\SignalRHost
+2022-02-07 16:24:23.023 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 16:24:23.049 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 404 0 - 27.1831ms
+2022-02-07 16:24:30.892 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 16:24:30.894 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 404 0 - 2.0359ms
+2022-02-07 16:24:34.772 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 16:24:34.775 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 404 0 - 2.7327ms
+2022-02-07 16:24:36.048 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 16:24:36.050 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 404 0 - 2.3331ms
+2022-02-07 16:24:40.449 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - -
+2022-02-07 16:24:40.450 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - - - 404 0 - 1.2819ms
+2022-02-07 16:24:42.887 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - -
+2022-02-07 16:24:42.889 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - - - 404 0 - 1.2184ms
+2022-02-07 16:24:43.461 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - -
+2022-02-07 16:24:43.463 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - - - 404 0 - 2.0507ms
+2022-02-07 16:24:43.667 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - -
+2022-02-07 16:24:43.669 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - - - 404 0 - 2.1417ms
+2022-02-07 16:24:43.893 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - -
+2022-02-07 16:24:43.895 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - - - 404 0 - 2.0527ms
+2022-02-07 16:24:44.109 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - -
+2022-02-07 16:24:44.111 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - - - 404 0 - 1.9177ms
+2022-02-07 16:24:44.283 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - -
+2022-02-07 16:24:44.284 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - - - 404 0 - 1.3626ms
+2022-02-07 16:24:44.478 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - -
+2022-02-07 16:24:44.481 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - - - 404 0 - 2.5466ms
+2022-02-07 16:24:44.862 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - -
+2022-02-07 16:24:44.863 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - - - 404 0 - 0.9709ms
+2022-02-07 16:24:45.782 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - -
+2022-02-07 16:24:45.783 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - - - 404 0 - 1.5255ms
+2022-02-07 16:24:45.964 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - -
+2022-02-07 16:24:45.967 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - - - 404 0 - 2.4033ms
+2022-02-07 16:24:46.139 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - -
+2022-02-07 16:24:46.141 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - - - 404 0 - 1.5285ms
+2022-02-07 16:24:46.339 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - -
+2022-02-07 16:24:46.341 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - - - 404 0 - 2.0773ms
+2022-02-07 16:24:46.518 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - -
+2022-02-07 16:24:46.520 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - - - 404 0 - 1.4916ms
+2022-02-07 16:24:46.678 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - -
+2022-02-07 16:24:46.680 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - - - 404 0 - 2.2992ms
+2022-02-07 16:24:46.845 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - -
+2022-02-07 16:24:46.847 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - - - 404 0 - 1.9003ms
+2022-02-07 16:24:47.062 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - -
+2022-02-07 16:24:47.064 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - - - 404 0 - 1.9540ms
+2022-02-07 16:24:47.709 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - -
+2022-02-07 16:24:47.711 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - - - 404 0 - 2.1467ms
+2022-02-07 16:24:47.917 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - -
+2022-02-07 16:24:47.919 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - - - 404 0 - 1.8811ms
+2022-02-07 16:24:48.083 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - -
+2022-02-07 16:24:48.085 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - - - 404 0 - 1.4560ms
+2022-02-07 16:24:48.283 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - -
+2022-02-07 16:24:48.285 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - - - 404 0 - 1.9470ms
+2022-02-07 16:24:50.043 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - -
+2022-02-07 16:24:50.045 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - - - 404 0 - 1.6441ms
+2022-02-07 16:25:03.064 +03:00 [INF] Now listening on: https://localhost:5001
+2022-02-07 16:25:03.105 +03:00 [INF] Now listening on: http://localhost:5000
+2022-02-07 16:25:03.108 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-02-07 16:25:03.108 +03:00 [INF] Hosting environment: Development
+2022-02-07 16:25:03.109 +03:00 [INF] Content root path: C:\NativeKit\SignalRHost
+2022-02-07 16:25:05.534 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/index.html - -
+2022-02-07 16:25:05.602 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/index.html - - - 200 - text/html;charset=utf-8 69.1850ms
+2022-02-07 16:25:05.833 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - -
+2022-02-07 16:25:05.957 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 123.1553ms
+2022-02-07 16:25:11.009 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 16:25:11.037 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 16:25:11.055 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 16:25:12.001 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 939.2703ms
+2022-02-07 16:25:12.022 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 16:25:12.067 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.BadImageFormatException: An attempt was made to load a program with an incorrect format. (0x8007000B)
+   at EOSDigital.SDK.CanonSDK.EdsRelease(IntPtr inRef)
+   at EOSDigital.API.CanonAPI..ctor(Boolean useCallingThread) in C:\NativeKit\EDSDKLib\API\Base\CanonAPI.cs:line 111
+   at EOSDigital.API.CanonAPI..ctor() in C:\NativeKit\EDSDKLib\API\Base\CanonAPI.cs:line 83
+   at SignalRHost.Services.DeviceServices.DevicesConnected() in C:\NativeKit\SignalRHost\Services\DeviceServices.cs:line 27
+   at SignalRHost.Controllers.NativeKitController.DevicesConnected() in C:\NativeKit\SignalRHost\Controllers\NativeKitController.cs:line 25
+   at lambda_method48(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-02-07 16:25:12.154 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 500 - text/plain 1145.0968ms
+2022-02-07 16:25:43.154 +03:00 [INF] Now listening on: https://localhost:5001
+2022-02-07 16:25:43.206 +03:00 [INF] Now listening on: http://localhost:5000
+2022-02-07 16:25:43.210 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-02-07 16:25:43.211 +03:00 [INF] Hosting environment: Development
+2022-02-07 16:25:43.212 +03:00 [INF] Content root path: C:\NativeKit\SignalRHost
+2022-02-07 16:25:44.332 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 16:25:44.374 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 16:25:44.391 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 16:25:45.007 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SignalRHost.Models.DeviceDetails, SignalRHost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-02-07 16:25:45.051 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 653.1403ms
+2022-02-07 16:25:45.054 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 16:25:45.056 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 200 - application/json;+charset=utf-8 726.5597ms
+2022-02-07 16:33:08.843 +03:00 [INF] Now listening on: https://localhost:5001
+2022-02-07 16:33:08.881 +03:00 [INF] Now listening on: http://localhost:5000
+2022-02-07 16:33:08.884 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-02-07 16:33:08.885 +03:00 [INF] Hosting environment: Development
+2022-02-07 16:33:08.885 +03:00 [INF] Content root path: C:\NativeKit\SignalRHost
+2022-02-07 16:33:27.303 +03:00 [INF] Now listening on: https://localhost:5001
+2022-02-07 16:33:27.360 +03:00 [INF] Now listening on: http://localhost:5000
+2022-02-07 16:33:27.364 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-02-07 16:33:27.365 +03:00 [INF] Hosting environment: Development
+2022-02-07 16:33:27.366 +03:00 [INF] Content root path: C:\NativeKit\SignalRHost
+2022-02-07 16:33:28.973 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 16:33:29.022 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 16:33:29.040 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 16:33:29.223 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 177.6499ms
+2022-02-07 16:33:29.248 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 16:33:29.308 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.BadImageFormatException: Could not load file or assembly 'Crossmatch, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'. An attempt was made to load a program with an incorrect format.
+File name: 'Crossmatch, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'
+   at SignalRHost.Services.DeviceServices.DevicesConnected()
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.Start[TStateMachine](TStateMachine& stateMachine)
+   at SignalRHost.Services.DeviceServices.DevicesConnected()
+   at SignalRHost.Controllers.NativeKitController.DevicesConnected() in C:\NativeKit\SignalRHost\Controllers\NativeKitController.cs:line 25
+   at lambda_method48(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-02-07 16:33:29.398 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 500 - text/plain 426.7167ms
+2022-02-07 16:35:30.025 +03:00 [INF] Now listening on: https://localhost:5001
+2022-02-07 16:35:30.066 +03:00 [INF] Now listening on: http://localhost:5000
+2022-02-07 16:35:30.068 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-02-07 16:35:30.068 +03:00 [INF] Hosting environment: Development
+2022-02-07 16:35:30.069 +03:00 [INF] Content root path: C:\NativeKit\SignalRHost
+2022-02-07 16:35:31.708 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 16:35:31.748 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 16:35:31.764 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 16:35:32.559 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 790.0676ms
+2022-02-07 16:35:32.580 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 16:35:32.621 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+Crossmatch.BioBaseException: An attempt was made to load a program with an incorrect format. (0x8007000B)
+   at Crossmatch.LSE.LseBioBaseApi.Open() in C:\NativeKit\Crossmatch\LSE\LseBioBaseApi.cs:line 44
+   at SignalRHost.Services.DeviceServices.DevicesConnected() in C:\NativeKit\SignalRHost\Services\DeviceServices.cs:line 20
+   at SignalRHost.Controllers.NativeKitController.DevicesConnected() in C:\NativeKit\SignalRHost\Controllers\NativeKitController.cs:line 25
+   at lambda_method48(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-02-07 16:35:32.702 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 500 - text/plain 995.8102ms
+2022-02-07 16:38:33.486 +03:00 [INF] Now listening on: https://localhost:5001
+2022-02-07 16:38:33.526 +03:00 [INF] Now listening on: http://localhost:5000
+2022-02-07 16:38:33.528 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-02-07 16:38:33.529 +03:00 [INF] Hosting environment: Development
+2022-02-07 16:38:33.529 +03:00 [INF] Content root path: C:\NativeKit\SignalRHost
+2022-02-07 16:38:43.203 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 16:38:43.240 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 16:38:43.256 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 16:38:43.423 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 162.1015ms
+2022-02-07 16:38:43.442 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 16:38:43.485 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.BadImageFormatException: Could not load file or assembly 'Crossmatch, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'. An attempt was made to load a program with an incorrect format.
+File name: 'Crossmatch, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null'
+   at SignalRHost.Services.DeviceServices.DevicesConnected()
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.Start[TStateMachine](TStateMachine& stateMachine)
+   at SignalRHost.Services.DeviceServices.DevicesConnected()
+   at SignalRHost.Controllers.NativeKitController.DevicesConnected() in C:\NativeKit\SignalRHost\Controllers\NativeKitController.cs:line 25
+   at lambda_method48(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2022-02-07 16:38:43.575 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 500 - text/plain 373.0949ms
+2022-02-07 16:39:31.599 +03:00 [INF] Now listening on: https://localhost:5001
+2022-02-07 16:39:43.774 +03:00 [INF] Now listening on: http://localhost:5000
+2022-02-07 16:39:43.777 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-02-07 16:39:43.778 +03:00 [INF] Hosting environment: Development
+2022-02-07 16:39:43.778 +03:00 [INF] Content root path: C:\NativeKit\SignalRHost
+2022-02-07 16:39:45.558 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 16:39:45.603 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 16:39:45.623 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 16:39:46.491 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SignalRHost.Models.DeviceDetails, SignalRHost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-02-07 16:39:46.535 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 906.0329ms
+2022-02-07 16:39:46.539 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 16:39:46.541 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 200 - application/json;+charset=utf-8 985.4019ms
+2022-02-07 16:39:52.136 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 16:39:52.139 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 16:39:52.144 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 16:39:52.664 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SignalRHost.Models.DeviceDetails, SignalRHost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-02-07 16:39:52.666 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 520.8693ms
+2022-02-07 16:39:52.668 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 16:39:52.669 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 200 - application/json;+charset=utf-8 533.4050ms
+2022-02-07 16:40:02.770 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 16:40:02.773 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 16:40:02.774 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 16:40:03.304 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SignalRHost.Models.DeviceDetails, SignalRHost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-02-07 16:40:03.306 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 528.6041ms
+2022-02-07 16:40:03.307 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 16:40:03.308 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 200 - application/json;+charset=utf-8 538.2118ms
+2022-02-07 16:41:02.815 +03:00 [INF] Now listening on: https://localhost:5001
+2022-02-07 16:41:02.857 +03:00 [INF] Now listening on: http://localhost:5000
+2022-02-07 16:41:02.861 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-02-07 16:41:02.862 +03:00 [INF] Hosting environment: Development
+2022-02-07 16:41:02.862 +03:00 [INF] Content root path: C:\NativeKit\SignalRHost
+2022-02-07 16:41:03.675 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 16:41:03.715 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 16:41:03.732 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 16:41:04.439 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SignalRHost.Models.DeviceDetails, SignalRHost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-02-07 16:41:04.480 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 742.192ms
+2022-02-07 16:41:04.483 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 16:41:04.485 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 200 - application/json;+charset=utf-8 812.0867ms
+2022-02-07 16:41:07.293 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 16:41:07.297 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 16:41:07.307 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 16:41:07.831 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SignalRHost.Models.DeviceDetails, SignalRHost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-02-07 16:41:07.833 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 522.4068ms
+2022-02-07 16:41:07.836 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 16:41:07.836 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 200 - application/json;+charset=utf-8 543.9368ms
+2022-02-07 16:41:08.469 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 16:41:08.471 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 16:41:08.472 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 16:41:08.987 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SignalRHost.Models.DeviceDetails, SignalRHost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-02-07 16:41:08.990 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 515.5777ms
+2022-02-07 16:41:08.990 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 16:41:08.991 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 200 - application/json;+charset=utf-8 522.3241ms
+2022-02-07 16:41:09.689 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 16:41:09.691 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 16:41:09.692 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 16:41:10.208 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SignalRHost.Models.DeviceDetails, SignalRHost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-02-07 16:41:10.211 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 516.1853ms
+2022-02-07 16:41:10.213 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 16:41:10.214 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 200 - application/json;+charset=utf-8 524.6414ms
+2022-02-07 16:41:10.817 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 16:41:10.819 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 16:41:10.820 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 16:41:11.333 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SignalRHost.Models.DeviceDetails, SignalRHost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-02-07 16:41:11.335 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 512.9007ms
+2022-02-07 16:41:11.336 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 16:41:11.337 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 200 - application/json;+charset=utf-8 519.6176ms
+2022-02-07 16:41:11.591 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 16:41:11.593 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 16:41:11.594 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 16:41:12.116 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SignalRHost.Models.DeviceDetails, SignalRHost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-02-07 16:41:12.122 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 522.7974ms
+2022-02-07 16:41:12.123 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 16:41:12.124 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 200 - application/json;+charset=utf-8 532.7765ms
+2022-02-07 16:41:12.602 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 16:41:12.604 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 16:41:12.605 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 16:41:13.112 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SignalRHost.Models.DeviceDetails, SignalRHost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-02-07 16:41:13.120 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 512.24ms
+2022-02-07 16:41:13.121 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 16:41:13.122 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 200 - application/json;+charset=utf-8 520.2257ms
+2022-02-07 16:42:16.443 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 16:42:16.445 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 16:42:16.446 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 16:42:16.987 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SignalRHost.Models.DeviceDetails, SignalRHost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-02-07 16:42:16.990 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 541.6355ms
+2022-02-07 16:42:16.991 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 16:42:16.992 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 200 - application/json;+charset=utf-8 548.3434ms
+2022-02-07 16:42:18.939 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 16:42:18.941 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 16:42:18.942 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 16:42:19.490 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SignalRHost.Models.DeviceDetails, SignalRHost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-02-07 16:42:19.496 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 551.7039ms
+2022-02-07 16:42:19.498 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 16:42:19.500 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 200 - application/json;+charset=utf-8 560.8660ms
+2022-02-07 18:33:41.482 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 18:33:41.488 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:33:41.488 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 18:33:42.041 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SignalRHost.Models.DeviceDetails, SignalRHost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-02-07 18:33:42.043 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 552.6816ms
+2022-02-07 18:33:42.044 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:33:42.045 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 200 - application/json;+charset=utf-8 562.2786ms
+2022-02-07 18:37:58.621 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 18:37:58.628 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:37:58.629 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 18:37:59.172 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SignalRHost.Models.DeviceDetails, SignalRHost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-02-07 18:37:59.174 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 543.5201ms
+2022-02-07 18:37:59.179 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:37:59.180 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 200 - application/json;+charset=utf-8 559.1197ms
+2022-02-07 18:38:04.625 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 18:38:04.626 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:38:04.628 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 18:38:05.165 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SignalRHost.Models.DeviceDetails, SignalRHost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-02-07 18:38:05.168 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 538.6221ms
+2022-02-07 18:38:05.169 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:38:05.170 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 200 - application/json;+charset=utf-8 544.6529ms
+2022-02-07 18:38:05.807 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 18:38:05.809 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:38:05.810 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 18:38:06.361 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SignalRHost.Models.DeviceDetails, SignalRHost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-02-07 18:38:06.365 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 553.1169ms
+2022-02-07 18:38:06.366 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:38:06.367 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 200 - application/json;+charset=utf-8 560.0101ms
+2022-02-07 18:38:31.592 +03:00 [INF] Application is shutting down...
+2022-02-07 18:39:24.256 +03:00 [INF] Now listening on: https://localhost:5001
+2022-02-07 18:39:24.297 +03:00 [INF] Now listening on: http://localhost:5000
+2022-02-07 18:39:24.302 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-02-07 18:39:24.305 +03:00 [INF] Hosting environment: Development
+2022-02-07 18:39:24.307 +03:00 [INF] Content root path: C:\NativeKit\SignalRHost
+2022-02-07 18:39:24.524 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 18:39:24.568 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:39:24.587 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 18:39:25.317 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SignalRHost.Models.DeviceDetails, SignalRHost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-02-07 18:39:25.355 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 763.5886ms
+2022-02-07 18:39:25.358 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:39:25.360 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 200 - application/json;+charset=utf-8 837.9376ms
+2022-02-07 18:39:27.816 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 18:39:27.821 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:39:27.824 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 18:39:28.361 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SignalRHost.Models.DeviceDetails, SignalRHost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-02-07 18:39:28.364 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 539.0832ms
+2022-02-07 18:39:28.366 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:39:28.368 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 200 - application/json;+charset=utf-8 551.2433ms
+2022-02-07 18:43:55.479 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/cameraOperationHub/negotiate?negotiateVersion=1 - 0
+2022-02-07 18:43:55.481 +03:00 [INF] Executing endpoint '/cameraOperationHub/negotiate'
+2022-02-07 18:43:55.494 +03:00 [INF] Executed endpoint '/cameraOperationHub/negotiate'
+2022-02-07 18:43:55.500 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/cameraOperationHub/negotiate?negotiateVersion=1 - 0 - 200 316 application/json 20.4561ms
+2022-02-07 18:43:55.572 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/cameraOperationHub?id=oF12ssxEoAa91004ekfDYQ - -
+2022-02-07 18:43:55.573 +03:00 [INF] Executing endpoint '/cameraOperationHub'
+2022-02-07 18:44:19.360 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 18:44:19.366 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:44:19.371 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 18:44:19.935 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SignalRHost.Models.DeviceDetails, SignalRHost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-02-07 18:44:19.939 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 559.3818ms
+2022-02-07 18:44:19.941 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:44:19.945 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 200 - application/json;+charset=utf-8 584.5744ms
+2022-02-07 18:44:24.028 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 18:44:24.034 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:44:24.037 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 18:44:24.607 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SignalRHost.Models.DeviceDetails, SignalRHost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-02-07 18:44:24.612 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 569.1029ms
+2022-02-07 18:44:24.616 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:44:24.620 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 200 - application/json;+charset=utf-8 591.3898ms
+2022-02-07 18:44:29.167 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 18:44:29.171 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:44:29.174 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 18:44:29.751 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SignalRHost.Models.DeviceDetails, SignalRHost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-02-07 18:44:29.754 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 574.481ms
+2022-02-07 18:44:29.761 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:44:29.765 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 200 - application/json;+charset=utf-8 597.3465ms
+2022-02-07 18:44:31.404 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 18:44:31.407 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:44:31.409 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 18:44:31.980 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SignalRHost.Models.DeviceDetails, SignalRHost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-02-07 18:44:31.983 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 571.5203ms
+2022-02-07 18:44:31.984 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:44:31.986 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 200 - application/json;+charset=utf-8 581.9854ms
+2022-02-07 18:44:40.586 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 18:44:40.589 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:44:40.592 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 18:44:41.171 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SignalRHost.Models.DeviceDetails, SignalRHost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-02-07 18:44:41.173 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 577.5349ms
+2022-02-07 18:44:41.174 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:44:41.176 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 200 - application/json;+charset=utf-8 589.6627ms
+2022-02-07 18:44:44.838 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 18:44:44.842 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:44:44.848 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 18:44:45.422 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SignalRHost.Models.DeviceDetails, SignalRHost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-02-07 18:44:45.425 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 570.8103ms
+2022-02-07 18:44:45.427 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:44:45.428 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 200 - application/json;+charset=utf-8 589.8694ms
+2022-02-07 18:44:45.845 +03:00 [ERR] Cannot access a disposed object.
+Object name: 'Camera1241983143232'.
+2022-02-07 18:44:50.346 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 18:44:50.348 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:44:50.349 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 18:44:50.902 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SignalRHost.Models.DeviceDetails, SignalRHost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-02-07 18:44:50.904 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 553.9099ms
+2022-02-07 18:44:50.905 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:44:50.906 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 200 - application/json;+charset=utf-8 560.2536ms
+2022-02-07 18:44:53.537 +03:00 [ERR] Cannot access a disposed object.
+Object name: 'Camera1241983143232'.
+2022-02-07 18:44:53.540 +03:00 [ERR]    at EOSDigital.API.Camera.CheckState(Boolean checkSession) in C:\NativeKit\EDSDKLib\API\Base\Camera.cs:line 1479
+   at EOSDigital.API.Camera.OpenSession() in C:\NativeKit\EDSDKLib\API\Base\Camera.cs:line 217
+   at SignalRHost.Hubs.CameraOperationHub.<StartCapturing>b__8_0() in C:\NativeKit\SignalRHost\Hubs\CameraOperationHub.cs:line 77
+2022-02-07 18:44:54.578 +03:00 [ERR] Cannot access a disposed object.
+Object name: 'Camera1241983143232'.
+2022-02-07 18:44:54.581 +03:00 [ERR]    at EOSDigital.API.Camera.CheckState(Boolean checkSession) in C:\NativeKit\EDSDKLib\API\Base\Camera.cs:line 1479
+   at EOSDigital.API.Camera.OpenSession() in C:\NativeKit\EDSDKLib\API\Base\Camera.cs:line 217
+   at SignalRHost.Hubs.CameraOperationHub.<StartCapturing>b__8_0() in C:\NativeKit\SignalRHost\Hubs\CameraOperationHub.cs:line 77
+2022-02-07 18:44:56.762 +03:00 [ERR] Cannot access a disposed object.
+Object name: 'Camera1241983143232'.
+2022-02-07 18:44:56.764 +03:00 [ERR]    at EOSDigital.API.Camera.CheckState(Boolean checkSession) in C:\NativeKit\EDSDKLib\API\Base\Camera.cs:line 1479
+   at EOSDigital.API.Camera.CloseSession() in C:\NativeKit\EDSDKLib\API\Base\Camera.cs:line 251
+   at SignalRHost.Hubs.CameraOperationHub.<OnDisconnectedAsync>b__16_0() in C:\NativeKit\SignalRHost\Hubs\CameraOperationHub.cs:line 224
+2022-02-07 18:44:56.770 +03:00 [INF] Executed endpoint '/cameraOperationHub'
+2022-02-07 18:44:56.772 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/cameraOperationHub?id=oF12ssxEoAa91004ekfDYQ - - - 101 - - 61200.5347ms
+2022-02-07 18:44:57.370 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/cameraOperationHub/negotiate?negotiateVersion=1 - 0
+2022-02-07 18:44:57.371 +03:00 [INF] Executing endpoint '/cameraOperationHub/negotiate'
+2022-02-07 18:44:57.372 +03:00 [INF] Executed endpoint '/cameraOperationHub/negotiate'
+2022-02-07 18:44:57.373 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/cameraOperationHub/negotiate?negotiateVersion=1 - 0 - 200 316 application/json 3.0025ms
+2022-02-07 18:44:57.375 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/cameraOperationHub?id=_4SrkZXkhDSLAvpZxuiUHQ - -
+2022-02-07 18:44:57.375 +03:00 [INF] Executing endpoint '/cameraOperationHub'
+2022-02-07 18:45:11.533 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 18:45:11.536 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:45:11.538 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 18:45:12.099 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SignalRHost.Models.DeviceDetails, SignalRHost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-02-07 18:45:12.101 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 560.4959ms
+2022-02-07 18:45:12.102 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:45:12.104 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 200 - application/json;+charset=utf-8 571.4446ms
+2022-02-07 18:45:13.411 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 18:45:13.415 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:45:13.417 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 18:45:13.986 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SignalRHost.Models.DeviceDetails, SignalRHost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-02-07 18:45:13.988 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 563.503ms
+2022-02-07 18:45:13.989 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:45:13.990 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 200 - application/json;+charset=utf-8 578.8410ms
+2022-02-07 18:45:15.263 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 18:45:15.265 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:45:15.266 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 18:45:15.851 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SignalRHost.Models.DeviceDetails, SignalRHost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-02-07 18:45:15.857 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 585.2365ms
+2022-02-07 18:45:15.861 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:45:15.862 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 200 - application/json;+charset=utf-8 599.3931ms
+2022-02-07 18:45:16.743 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 18:45:16.745 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:45:16.747 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 18:45:17.298 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SignalRHost.Models.DeviceDetails, SignalRHost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-02-07 18:45:17.300 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 549.3595ms
+2022-02-07 18:45:17.301 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:45:17.302 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 200 - application/json;+charset=utf-8 559.1663ms
+2022-02-07 18:45:17.504 +03:00 [ERR] Cannot access a disposed object.
+Object name: 'Camera1241985458432'.
+2022-02-07 18:46:11.470 +03:00 [ERR] Cannot access a disposed object.
+Object name: 'Camera1241985458432'.
+2022-02-07 18:46:11.471 +03:00 [ERR]    at EOSDigital.API.Camera.CheckState(Boolean checkSession) in C:\NativeKit\EDSDKLib\API\Base\Camera.cs:line 1479
+   at EOSDigital.API.Camera.OpenSession() in C:\NativeKit\EDSDKLib\API\Base\Camera.cs:line 217
+   at SignalRHost.Hubs.CameraOperationHub.<StartCapturing>b__8_0() in C:\NativeKit\SignalRHost\Hubs\CameraOperationHub.cs:line 77
+2022-02-07 18:46:12.396 +03:00 [ERR] Cannot access a disposed object.
+Object name: 'Camera1241985458432'.
+2022-02-07 18:46:12.398 +03:00 [ERR]    at EOSDigital.API.Camera.CheckState(Boolean checkSession) in C:\NativeKit\EDSDKLib\API\Base\Camera.cs:line 1479
+   at EOSDigital.API.Camera.OpenSession() in C:\NativeKit\EDSDKLib\API\Base\Camera.cs:line 217
+   at SignalRHost.Hubs.CameraOperationHub.<StartCapturing>b__8_0() in C:\NativeKit\SignalRHost\Hubs\CameraOperationHub.cs:line 77
+2022-02-07 18:46:13.913 +03:00 [ERR] Cannot access a disposed object.
+Object name: 'Camera1241985458432'.
+2022-02-07 18:46:13.916 +03:00 [ERR]    at EOSDigital.API.Camera.CheckState(Boolean checkSession) in C:\NativeKit\EDSDKLib\API\Base\Camera.cs:line 1479
+   at EOSDigital.API.Camera.CloseSession() in C:\NativeKit\EDSDKLib\API\Base\Camera.cs:line 251
+   at SignalRHost.Hubs.CameraOperationHub.<OnDisconnectedAsync>b__16_0() in C:\NativeKit\SignalRHost\Hubs\CameraOperationHub.cs:line 224
+2022-02-07 18:46:13.919 +03:00 [INF] Executed endpoint '/cameraOperationHub'
+2022-02-07 18:46:13.920 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/cameraOperationHub?id=_4SrkZXkhDSLAvpZxuiUHQ - - - 101 - - 76545.5928ms
+2022-02-07 18:46:14.359 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/cameraOperationHub/negotiate?negotiateVersion=1 - 0
+2022-02-07 18:46:14.362 +03:00 [INF] Executing endpoint '/cameraOperationHub/negotiate'
+2022-02-07 18:46:14.365 +03:00 [INF] Executed endpoint '/cameraOperationHub/negotiate'
+2022-02-07 18:46:14.367 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/cameraOperationHub/negotiate?negotiateVersion=1 - 0 - 200 316 application/json 7.9088ms
+2022-02-07 18:46:14.372 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/cameraOperationHub?id=PGZBd5YM5FMPM29sfatE9A - -
+2022-02-07 18:46:14.373 +03:00 [INF] Executing endpoint '/cameraOperationHub'
+2022-02-07 18:46:22.572 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 18:46:22.574 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:46:22.577 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 18:46:23.137 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SignalRHost.Models.DeviceDetails, SignalRHost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-02-07 18:46:23.139 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 558.3192ms
+2022-02-07 18:46:23.140 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:46:23.142 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 200 - application/json;+charset=utf-8 569.7873ms
+2022-02-07 18:46:30.680 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 18:46:30.682 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:46:30.685 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 18:46:31.252 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SignalRHost.Models.DeviceDetails, SignalRHost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-02-07 18:46:31.254 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 565.0438ms
+2022-02-07 18:46:31.255 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:46:31.256 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 200 - application/json;+charset=utf-8 576.4647ms
+2022-02-07 18:46:33.584 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 18:46:33.590 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:46:33.593 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 18:46:34.167 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SignalRHost.Models.DeviceDetails, SignalRHost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-02-07 18:46:34.170 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 565.975ms
+2022-02-07 18:46:34.172 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:46:34.173 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 200 - application/json;+charset=utf-8 589.1508ms
+2022-02-07 18:47:03.996 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 18:47:03.999 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:47:04.000 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 18:47:04.555 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SignalRHost.Models.DeviceDetails, SignalRHost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-02-07 18:47:04.558 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 552.3799ms
+2022-02-07 18:47:04.559 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:47:04.562 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 200 - application/json;+charset=utf-8 565.7135ms
+2022-02-07 18:47:05.520 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 18:47:05.523 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:47:05.524 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 18:47:06.096 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SignalRHost.Models.DeviceDetails, SignalRHost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-02-07 18:47:06.101 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 573.7337ms
+2022-02-07 18:47:06.102 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:47:06.104 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 200 - application/json;+charset=utf-8 584.2617ms
+2022-02-07 18:47:06.968 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 18:47:06.970 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:47:06.972 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 18:47:07.552 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SignalRHost.Models.DeviceDetails, SignalRHost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-02-07 18:47:07.557 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 582.7051ms
+2022-02-07 18:47:07.558 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:47:07.559 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 200 - application/json;+charset=utf-8 591.4390ms
+2022-02-07 18:47:10.409 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 18:47:10.412 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:47:10.418 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 18:47:10.984 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SignalRHost.Models.DeviceDetails, SignalRHost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-02-07 18:47:10.986 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 561.9443ms
+2022-02-07 18:47:10.988 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:47:10.989 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 200 - application/json;+charset=utf-8 579.9352ms
+2022-02-07 18:47:11.051 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 18:47:11.054 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:47:11.055 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 18:47:11.629 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SignalRHost.Models.DeviceDetails, SignalRHost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-02-07 18:47:11.631 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 573.9557ms
+2022-02-07 18:47:11.633 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:47:11.635 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 200 - application/json;+charset=utf-8 584.0623ms
+2022-02-07 18:47:12.463 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 18:47:12.468 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:47:12.471 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 18:47:13.041 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SignalRHost.Models.DeviceDetails, SignalRHost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-02-07 18:47:13.043 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 567.6848ms
+2022-02-07 18:47:13.044 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:47:13.046 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 200 - application/json;+charset=utf-8 583.7456ms
+2022-02-07 18:47:13.437 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 18:47:13.439 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:47:13.440 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 18:47:14.017 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SignalRHost.Models.DeviceDetails, SignalRHost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-02-07 18:47:14.021 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 578.3946ms
+2022-02-07 18:47:14.024 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:47:14.025 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 200 - application/json;+charset=utf-8 587.8906ms
+2022-02-07 18:47:14.051 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 18:47:14.053 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:47:14.059 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 18:47:14.623 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SignalRHost.Models.DeviceDetails, SignalRHost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-02-07 18:47:14.627 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 565.3857ms
+2022-02-07 18:47:14.629 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:47:14.632 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 200 - application/json;+charset=utf-8 580.9215ms
+2022-02-07 18:47:17.049 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 18:47:17.053 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:47:17.054 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 18:47:17.613 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SignalRHost.Models.DeviceDetails, SignalRHost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-02-07 18:47:17.615 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 557.2194ms
+2022-02-07 18:47:17.617 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:47:17.619 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 200 - application/json;+charset=utf-8 569.6088ms
+2022-02-07 18:47:17.749 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 18:47:17.750 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:47:17.753 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 18:47:18.323 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SignalRHost.Models.DeviceDetails, SignalRHost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-02-07 18:47:18.327 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 568.8ms
+2022-02-07 18:47:18.328 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:47:18.329 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 200 - application/json;+charset=utf-8 580.5422ms
+2022-02-07 18:47:18.416 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 18:47:18.418 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:47:18.421 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 18:47:18.980 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SignalRHost.Models.DeviceDetails, SignalRHost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-02-07 18:47:18.986 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 562.1927ms
+2022-02-07 18:47:18.987 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:47:18.989 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 200 - application/json;+charset=utf-8 572.8831ms
+2022-02-07 18:47:19.237 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 18:47:19.239 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:47:19.239 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 18:47:19.808 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SignalRHost.Models.DeviceDetails, SignalRHost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-02-07 18:47:19.813 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 567.9935ms
+2022-02-07 18:47:19.814 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:47:19.816 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 200 - application/json;+charset=utf-8 578.7870ms
+2022-02-07 18:47:19.837 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 18:47:19.839 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:47:19.842 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 18:47:20.411 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SignalRHost.Models.DeviceDetails, SignalRHost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-02-07 18:47:20.414 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 567.2088ms
+2022-02-07 18:47:20.416 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:47:20.417 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 200 - application/json;+charset=utf-8 580.1883ms
+2022-02-07 18:47:21.018 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 18:47:21.021 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:47:21.025 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 18:47:21.598 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SignalRHost.Models.DeviceDetails, SignalRHost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-02-07 18:47:21.600 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 570.6431ms
+2022-02-07 18:47:21.602 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:47:21.603 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 200 - application/json;+charset=utf-8 585.2120ms
+2022-02-07 18:47:29.943 +03:00 [INF] Executed endpoint '/cameraOperationHub'
+2022-02-07 18:47:29.944 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/cameraOperationHub?id=PGZBd5YM5FMPM29sfatE9A - - - 101 - - 75572.1682ms
+2022-02-07 18:47:46.516 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/crossmatchOperationHub/negotiate?negotiateVersion=1 - 0
+2022-02-07 18:47:46.517 +03:00 [INF] Executing endpoint '/crossmatchOperationHub/negotiate'
+2022-02-07 18:47:46.518 +03:00 [INF] Executed endpoint '/crossmatchOperationHub/negotiate'
+2022-02-07 18:47:46.519 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/crossmatchOperationHub/negotiate?negotiateVersion=1 - 0 - 200 316 application/json 2.6374ms
+2022-02-07 18:47:46.529 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/crossmatchOperationHub?id=8jS0aQhqFKouxD1wz_M1EA - -
+2022-02-07 18:47:46.529 +03:00 [INF] Executing endpoint '/crossmatchOperationHub'
+2022-02-07 18:47:50.448 +03:00 [INF] Initializing.... 0
+2022-02-07 18:47:50.636 +03:00 [INF] Initializing.... 10
+2022-02-07 18:47:51.010 +03:00 [INF] Initializing.... 40
+2022-02-07 18:47:51.074 +03:00 [INF] Initializing.... 66.66667
+2022-02-07 18:47:57.585 +03:00 [INF] Initializing.... 100
+2022-02-07 18:47:57.989 +03:00 [ERR] Unable to initilize device due BioBase Return code '102'
+2022-02-07 18:47:57.990 +03:00 [INF] Error while initializing device
+2022-02-07 18:48:26.215 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 18:48:26.216 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:48:26.217 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 18:48:26.760 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SignalRHost.Models.DeviceDetails, SignalRHost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-02-07 18:48:26.762 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 542.8413ms
+2022-02-07 18:48:26.763 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:48:26.764 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 200 - application/json;+charset=utf-8 548.8345ms
+2022-02-07 18:48:30.828 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 18:48:30.831 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:48:30.833 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 18:48:31.374 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SignalRHost.Models.DeviceDetails, SignalRHost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-02-07 18:48:31.376 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 541.4465ms
+2022-02-07 18:48:31.377 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:48:31.378 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 200 - application/json;+charset=utf-8 549.6504ms
+2022-02-07 18:49:02.972 +03:00 [INF] Initializing.... 0
+2022-02-07 18:49:03.096 +03:00 [INF] Initializing.... 10
+2022-02-07 18:49:03.283 +03:00 [INF] Initializing.... 100
+2022-02-07 18:49:16.585 +03:00 [INF] Initializing.... 0
+2022-02-07 18:49:16.709 +03:00 [INF] Initializing.... 10
+2022-02-07 18:49:16.895 +03:00 [INF] Initializing.... 53.333336
+2022-02-07 18:49:16.957 +03:00 [INF] Initializing.... 100
+2022-02-07 18:49:40.521 +03:00 [INF] Initializing.... 0
+2022-02-07 18:49:40.704 +03:00 [INF] Initializing.... 10
+2022-02-07 18:49:40.828 +03:00 [INF] Initializing.... 40
+2022-02-07 18:49:40.890 +03:00 [INF] Initializing.... 100
+2022-02-07 18:49:42.552 +03:00 [ERR] Unable to initilize device due BioBase Return code '102'
+2022-02-07 18:49:42.553 +03:00 [INF] Error while initializing device
+2022-02-07 18:49:54.086 +03:00 [INF] Initializing.... 0
+2022-02-07 18:49:54.272 +03:00 [INF] Initializing.... 10
+2022-02-07 18:49:54.460 +03:00 [INF] Initializing.... 100
+2022-02-07 18:49:56.139 +03:00 [ERR] Unable to initilize device due BioBase Return code '102'
+2022-02-07 18:49:56.141 +03:00 [INF] Error while initializing device
+2022-02-07 18:50:48.479 +03:00 [INF] Initializing.... 0
+2022-02-07 18:50:48.604 +03:00 [INF] Initializing.... 10
+2022-02-07 18:50:48.792 +03:00 [INF] Initializing.... 40
+2022-02-07 18:50:48.854 +03:00 [INF] Initializing.... 100
+2022-02-07 18:51:11.389 +03:00 [INF] Initializing.... 0
+2022-02-07 18:51:11.511 +03:00 [INF] Initializing.... 10
+2022-02-07 18:51:11.698 +03:00 [INF] Initializing.... 40
+2022-02-07 18:51:11.760 +03:00 [INF] Initializing.... 100
+2022-02-07 18:51:13.411 +03:00 [ERR] Unable to initilize device due BioBase Return code '102'
+2022-02-07 18:51:13.412 +03:00 [INF] Error while initializing device
+2022-02-07 18:51:22.012 +03:00 [INF] Initializing.... 0
+2022-02-07 18:51:22.197 +03:00 [INF] Initializing.... 10
+2022-02-07 18:51:22.319 +03:00 [INF] Initializing.... 40
+2022-02-07 18:51:22.381 +03:00 [INF] Initializing.... 100
+2022-02-07 18:51:24.059 +03:00 [ERR] Unable to initilize device due BioBase Return code '102'
+2022-02-07 18:51:24.061 +03:00 [INF] Error while initializing device
+2022-02-07 18:51:27.572 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - -
+2022-02-07 18:51:27.574 +03:00 [INF] Executing endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:51:27.575 +03:00 [INF] Route matched with {action = "DevicesConnected", controller = "NativeKit"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[SignalRHost.Models.DeviceDetails]]] DevicesConnected() on controller SignalRHost.Controllers.NativeKitController (SignalRHost).
+2022-02-07 18:51:28.116 +03:00 [INF] Executing ObjectResult, writing value of type 'System.Collections.Generic.List`1[[SignalRHost.Models.DeviceDetails, SignalRHost, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-02-07 18:51:28.118 +03:00 [INF] Executed action SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost) in 541.3635ms
+2022-02-07 18:51:28.119 +03:00 [INF] Executed endpoint 'SignalRHost.Controllers.NativeKitController.DevicesConnected (SignalRHost)'
+2022-02-07 18:51:28.120 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/api/NativeKit/allDevicesConnected - - - 200 - application/json;+charset=utf-8 548.0006ms
+2022-02-07 18:51:39.649 +03:00 [INF] Initializing.... 0
+2022-02-07 18:51:39.772 +03:00 [INF] Initializing.... 10
+2022-02-07 18:51:39.959 +03:00 [INF] Initializing.... 66.66667
+2022-02-07 18:51:40.020 +03:00 [INF] Initializing.... 100
+2022-02-07 18:51:52.875 +03:00 [INF] Initializing.... 0
+2022-02-07 18:51:53.060 +03:00 [INF] Initializing.... 10
+2022-02-07 18:51:53.246 +03:00 [INF] Initializing.... 100
+2022-02-07 18:51:54.926 +03:00 [ERR] Unable to initilize device due BioBase Return code '102'
+2022-02-07 18:51:54.927 +03:00 [INF] Error while initializing device
+2022-02-07 18:51:59.543 +03:00 [INF] Initializing.... 0
+2022-02-07 18:51:59.665 +03:00 [INF] Initializing.... 10
+2022-02-07 18:51:59.911 +03:00 [INF] Initializing.... 100
+2022-02-07 18:52:08.769 +03:00 [ERR] Object reference not set to an instance of an object.
+2022-02-07 18:52:09.766 +03:00 [ERR] Object reference not set to an instance of an object.
+2022-02-07 18:52:10.248 +03:00 [ERR] Object reference not set to an instance of an object.
+2022-02-07 19:02:03.049 +03:00 [INF] Now listening on: https://localhost:5001
+2022-02-07 19:02:03.093 +03:00 [INF] Now listening on: http://localhost:5000
+2022-02-07 19:02:03.096 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-02-07 19:02:03.097 +03:00 [INF] Hosting environment: Development
+2022-02-07 19:02:03.098 +03:00 [INF] Content root path: C:\NativeKit\SignalRHost
+2022-02-07 19:02:08.156 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/crossmatchOperationHub/negotiate?negotiateVersion=1 - 0
+2022-02-07 19:02:08.186 +03:00 [INF] Executing endpoint '/crossmatchOperationHub/negotiate'
+2022-02-07 19:02:08.216 +03:00 [INF] Executed endpoint '/crossmatchOperationHub/negotiate'
+2022-02-07 19:02:08.221 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/crossmatchOperationHub/negotiate?negotiateVersion=1 - 0 - 200 316 application/json 66.9485ms
+2022-02-07 19:02:08.227 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/crossmatchOperationHub?id=yaqVvPTigzZ8W1c1bF_eMQ - -
+2022-02-07 19:02:08.238 +03:00 [INF] Executing endpoint '/crossmatchOperationHub'
+2022-02-07 19:02:11.334 +03:00 [INF] Initializing.... 0
+2022-02-07 19:02:11.520 +03:00 [INF] Initializing.... 10
+2022-02-07 19:02:11.707 +03:00 [INF] Initializing.... 100
+2022-02-07 19:02:30.002 +03:00 [ERR] Object reference not set to an instance of an object.
+2022-02-07 19:02:31.840 +03:00 [ERR] Object reference not set to an instance of an object.
+2022-02-07 19:02:32.100 +03:00 [ERR] Object reference not set to an instance of an object.
+2022-02-07 19:02:32.302 +03:00 [ERR] Object reference not set to an instance of an object.
+2022-02-07 19:02:33.997 +03:00 [INF] Initializing.... 0
+2022-02-07 19:02:34.186 +03:00 [INF] Initializing.... 10
+2022-02-07 19:02:34.309 +03:00 [INF] Initializing.... 40
+2022-02-07 19:02:34.371 +03:00 [INF] Initializing.... 100
+2022-02-07 19:02:36.050 +03:00 [ERR] Unable to initilize device due BioBase Return code '102'
+2022-02-07 19:02:36.052 +03:00 [INF] Error while initializing device
+2022-02-07 19:02:39.320 +03:00 [ERR] Object reference not set to an instance of an object.
+2022-02-07 19:03:42.072 +03:00 [INF] Now listening on: https://localhost:5001
+2022-02-07 19:03:42.125 +03:00 [INF] Now listening on: http://localhost:5000
+2022-02-07 19:03:42.128 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-02-07 19:03:42.130 +03:00 [INF] Hosting environment: Development
+2022-02-07 19:03:42.131 +03:00 [INF] Content root path: C:\NativeKit\SignalRHost
+2022-02-07 19:03:42.429 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/crossmatchOperationHub/negotiate?negotiateVersion=1 - 0
+2022-02-07 19:03:42.462 +03:00 [INF] Executing endpoint '/crossmatchOperationHub/negotiate'
+2022-02-07 19:03:42.491 +03:00 [INF] Executed endpoint '/crossmatchOperationHub/negotiate'
+2022-02-07 19:03:42.495 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/crossmatchOperationHub/negotiate?negotiateVersion=1 - 0 - 200 316 application/json 67.0318ms
+2022-02-07 19:03:42.498 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/crossmatchOperationHub?id=OR5kDaRQ3-xIStXQ08TtUw - -
+2022-02-07 19:03:42.510 +03:00 [INF] Executing endpoint '/crossmatchOperationHub'
+2022-02-07 19:03:51.749 +03:00 [INF] Initializing.... 0
+2022-02-07 19:03:51.870 +03:00 [INF] Initializing.... 10
+2022-02-07 19:03:52.056 +03:00 [INF] Initializing.... 40
+2022-02-07 19:03:52.117 +03:00 [INF] Initializing.... 100
+2022-02-07 19:04:08.479 +03:00 [ERR] Object reference not set to an instance of an object.
+2022-02-07 19:04:09.421 +03:00 [ERR] Object reference not set to an instance of an object.
+2022-02-07 19:04:09.950 +03:00 [ERR] Object reference not set to an instance of an object.
+2022-02-07 19:04:10.114 +03:00 [ERR] Object reference not set to an instance of an object.
+2022-02-07 19:04:21.381 +03:00 [INF] Initializing.... 0
+2022-02-07 19:04:21.505 +03:00 [INF] Initializing.... 10
+2022-02-07 19:04:21.693 +03:00 [INF] Initializing.... 53.333336
+2022-02-07 19:04:21.755 +03:00 [INF] Initializing.... 100
+2022-02-07 19:04:23.395 +03:00 [ERR] Unable to initilize device due BioBase Return code '102'
+2022-02-07 19:04:23.396 +03:00 [INF] Error while initializing device
+2022-02-07 19:04:24.094 +03:00 [INF] Initializing.... 0
+2022-02-07 19:04:24.219 +03:00 [INF] Initializing.... 10
+2022-02-07 19:04:24.406 +03:00 [INF] Initializing.... 53.333336
+2022-02-07 19:04:24.469 +03:00 [INF] Initializing.... 100
+2022-02-07 19:04:26.106 +03:00 [ERR] Unable to initilize device due BioBase Return code '102'
+2022-02-07 19:04:26.107 +03:00 [INF] Error while initializing device
+2022-02-07 19:11:30.163 +03:00 [INF] Now listening on: https://localhost:5001
+2022-02-07 19:11:30.207 +03:00 [INF] Now listening on: http://localhost:5000
+2022-02-07 19:11:30.210 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-02-07 19:11:30.211 +03:00 [INF] Hosting environment: Development
+2022-02-07 19:11:30.211 +03:00 [INF] Content root path: C:\NativeKit\SignalRHost
+2022-02-07 19:12:09.594 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/crossmatchOperationHub/negotiate?negotiateVersion=1 - 0
+2022-02-07 19:12:09.625 +03:00 [INF] Executing endpoint '/crossmatchOperationHub/negotiate'
+2022-02-07 19:12:09.654 +03:00 [INF] Executed endpoint '/crossmatchOperationHub/negotiate'
+2022-02-07 19:12:09.657 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/crossmatchOperationHub/negotiate?negotiateVersion=1 - 0 - 200 316 application/json 65.2354ms
+2022-02-07 19:12:09.717 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/crossmatchOperationHub?id=YiSrC8GceHQeM7Z4e0jkUA - -
+2022-02-07 19:12:09.729 +03:00 [INF] Executing endpoint '/crossmatchOperationHub'
+2022-02-07 19:12:12.256 +03:00 [INF] Initializing.... 0
+2022-02-07 19:12:12.379 +03:00 [INF] Initializing.... 10
+2022-02-07 19:12:12.568 +03:00 [INF] Initializing.... 40
+2022-02-07 19:12:12.630 +03:00 [INF] Initializing.... 100
+2022-02-07 19:12:40.639 +03:00 [ERR] Object reference not set to an instance of an object.
+2022-02-07 19:12:41.572 +03:00 [ERR] Object reference not set to an instance of an object.
+2022-02-07 19:12:46.881 +03:00 [INF] Initializing.... 0
+2022-02-07 19:12:47.007 +03:00 [INF] Initializing.... 10
+2022-02-07 19:12:47.194 +03:00 [INF] Initializing.... 40
+2022-02-07 19:12:47.256 +03:00 [INF] Initializing.... 100
+2022-02-07 19:12:48.877 +03:00 [ERR] Unable to initilize device due BioBase Return code '102'
+2022-02-07 19:12:48.879 +03:00 [INF] Error while initializing device
+2022-02-07 19:12:56.225 +03:00 [INF] Initializing.... 0
+2022-02-07 19:12:56.350 +03:00 [INF] Initializing.... 10
+2022-02-07 19:12:56.600 +03:00 [INF] Initializing.... 100
+2022-02-07 19:13:05.160 +03:00 [ERR] Object reference not set to an instance of an object.
+2022-02-07 19:13:06.122 +03:00 [ERR] Object reference not set to an instance of an object.
+2022-02-07 19:13:06.642 +03:00 [ERR] Object reference not set to an instance of an object.
+2022-02-07 19:13:06.814 +03:00 [ERR] Object reference not set to an instance of an object.
+2022-02-07 19:13:07.006 +03:00 [ERR] Object reference not set to an instance of an object.
+2022-02-07 19:13:08.482 +03:00 [INF] Initializing.... 0
+2022-02-07 19:13:08.607 +03:00 [INF] Initializing.... 10
+2022-02-07 19:13:08.792 +03:00 [INF] Initializing.... 100
+2022-02-07 19:13:10.497 +03:00 [ERR] Unable to initilize device due BioBase Return code '102'
+2022-02-07 19:13:10.498 +03:00 [INF] Error while initializing device
+2022-02-07 19:13:14.196 +03:00 [INF] Initializing.... 0
+2022-02-07 19:13:14.323 +03:00 [INF] Initializing.... 10
+2022-02-07 19:13:14.506 +03:00 [INF] Initializing.... 40
+2022-02-07 19:13:14.569 +03:00 [INF] Initializing.... 100
+2022-02-07 19:13:23.095 +03:00 [ERR] Object reference not set to an instance of an object.
+2022-02-07 19:13:24.266 +03:00 [ERR] Object reference not set to an instance of an object.
+2022-02-07 19:13:26.890 +03:00 [INF] Executed endpoint '/crossmatchOperationHub'
+2022-02-07 19:13:26.892 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/crossmatchOperationHub?id=YiSrC8GceHQeM7Z4e0jkUA - - - 101 - - 77174.6458ms
+2022-02-07 19:18:36.594 +03:00 [INF] Now listening on: https://localhost:5001
+2022-02-07 19:18:36.639 +03:00 [INF] Now listening on: http://localhost:5000
+2022-02-07 19:18:36.642 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-02-07 19:18:36.643 +03:00 [INF] Hosting environment: Development
+2022-02-07 19:18:36.643 +03:00 [INF] Content root path: C:\NativeKit\SignalRHost
+2022-02-07 19:18:39.937 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/crossmaychOperationHub/negotiate?negotiateVersion=1 - 0
+2022-02-07 19:18:39.977 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/crossmaychOperationHub/negotiate?negotiateVersion=1 - 0 - 404 0 - 42.2071ms
+2022-02-07 19:18:44.346 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/crossmaychOperationHub/negotiate?negotiateVersion=1 - 0
+2022-02-07 19:18:44.351 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/crossmaychOperationHub/negotiate?negotiateVersion=1 - 0 - 404 0 - 3.0412ms
+2022-02-07 19:18:45.316 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/crossmaychOperationHub/negotiate?negotiateVersion=1 - 0
+2022-02-07 19:18:45.318 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/crossmaychOperationHub/negotiate?negotiateVersion=1 - 0 - 404 0 - 1.3136ms
+2022-02-07 19:18:58.452 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/crossmatchOperationHub/negotiate?negotiateVersion=1 - 0
+2022-02-07 19:18:58.456 +03:00 [INF] Executing endpoint '/crossmatchOperationHub/negotiate'
+2022-02-07 19:18:58.470 +03:00 [INF] Executed endpoint '/crossmatchOperationHub/negotiate'
+2022-02-07 19:18:58.472 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/crossmatchOperationHub/negotiate?negotiateVersion=1 - 0 - 200 316 application/json 19.0583ms
+2022-02-07 19:18:58.528 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/crossmatchOperationHub?id=ssiB5__FitNCIbgd7cigbg - -
+2022-02-07 19:18:58.540 +03:00 [INF] Executing endpoint '/crossmatchOperationHub'
+2022-02-07 19:19:03.514 +03:00 [INF] Initializing.... 0
+2022-02-07 19:19:03.701 +03:00 [INF] Initializing.... 10
+2022-02-07 19:19:03.888 +03:00 [INF] Initializing.... 100
+2022-02-07 19:19:05.566 +03:00 [ERR] Unable to initilize device due BioBase Return code '102'
+2022-02-07 19:19:05.568 +03:00 [INF] Error while initializing device
+2022-02-07 19:19:09.453 +03:00 [INF] Initializing.... 0
+2022-02-07 19:19:09.577 +03:00 [INF] Initializing.... 10
+2022-02-07 19:19:09.764 +03:00 [INF] Initializing.... 40
+2022-02-07 19:19:09.826 +03:00 [INF] Initializing.... 100
+2022-02-07 19:19:11.470 +03:00 [ERR] Unable to initilize device due BioBase Return code '102'
+2022-02-07 19:19:11.471 +03:00 [INF] Error while initializing device
+2022-02-07 19:19:16.493 +03:00 [INF] Initializing.... 0
+2022-02-07 19:19:16.615 +03:00 [INF] Initializing.... 10
+2022-02-07 19:19:16.803 +03:00 [INF] Initializing.... 100
+2022-02-07 19:19:26.564 +03:00 [ERR] Object reference not set to an instance of an object.
+2022-02-07 19:20:58.462 +03:00 [INF] Initializing.... 0
+2022-02-07 19:20:58.584 +03:00 [INF] Initializing.... 10
+2022-02-07 19:20:58.773 +03:00 [INF] Initializing.... 40
+2022-02-07 19:20:58.836 +03:00 [INF] Initializing.... 100
+2022-02-07 19:21:06.989 +03:00 [ERR] Object reference not set to an instance of an object.
+2022-02-07 19:21:08.057 +03:00 [ERR] Object reference not set to an instance of an object.
+2022-02-07 19:21:08.284 +03:00 [ERR] Object reference not set to an instance of an object.
+2022-02-07 19:21:08.476 +03:00 [ERR] Object reference not set to an instance of an object.
+2022-02-07 19:26:38.315 +03:00 [INF] Now listening on: https://localhost:5001
+2022-02-07 19:26:38.355 +03:00 [INF] Now listening on: http://localhost:5000
+2022-02-07 19:26:38.358 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-02-07 19:26:38.359 +03:00 [INF] Hosting environment: Development
+2022-02-07 19:26:38.360 +03:00 [INF] Content root path: C:\NativeKit\SignalRHost
+2022-02-07 19:26:43.665 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/crossmatchOperationHub/negotiate?negotiateVersion=1 - 0
+2022-02-07 19:26:43.700 +03:00 [INF] Executing endpoint '/crossmatchOperationHub/negotiate'
+2022-02-07 19:26:43.731 +03:00 [INF] Executed endpoint '/crossmatchOperationHub/negotiate'
+2022-02-07 19:26:43.734 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/crossmatchOperationHub/negotiate?negotiateVersion=1 - 0 - 200 316 application/json 71.9366ms
+2022-02-07 19:26:43.801 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/crossmatchOperationHub?id=hj2lZKQDtYOEOosEGNATQQ - -
+2022-02-07 19:26:43.813 +03:00 [INF] Executing endpoint '/crossmatchOperationHub'
+2022-02-07 19:26:46.196 +03:00 [INF] Initializing.... 0
+2022-02-07 19:26:46.321 +03:00 [INF] Initializing.... 10
+2022-02-07 19:26:46.509 +03:00 [INF] Initializing.... 40
+2022-02-07 19:26:46.571 +03:00 [INF] Initializing.... 100
+2022-02-07 19:27:07.901 +03:00 [ERR] BioBase Return code '-208'
+2022-02-07 19:27:08.851 +03:00 [ERR] BioBase Return code '-208'
+2022-02-07 19:27:31.148 +03:00 [INF] Executed endpoint '/crossmatchOperationHub'
+2022-02-07 19:27:31.151 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/crossmatchOperationHub?id=hj2lZKQDtYOEOosEGNATQQ - - - 101 - - 47349.3451ms
+2022-02-07 19:33:23.731 +03:00 [INF] Now listening on: https://localhost:5001
+2022-02-07 19:33:23.770 +03:00 [INF] Now listening on: http://localhost:5000
+2022-02-07 19:33:23.773 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-02-07 19:33:23.773 +03:00 [INF] Hosting environment: Development
+2022-02-07 19:33:23.774 +03:00 [INF] Content root path: C:\NativeKit\SignalRHost
+2022-02-07 19:33:28.141 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/crossmatchOperationHub/negotiate?negotiateVersion=1 - 0
+2022-02-07 19:33:28.173 +03:00 [INF] Executing endpoint '/crossmatchOperationHub/negotiate'
+2022-02-07 19:33:28.208 +03:00 [INF] Executed endpoint '/crossmatchOperationHub/negotiate'
+2022-02-07 19:33:28.213 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/crossmatchOperationHub/negotiate?negotiateVersion=1 - 0 - 200 316 application/json 73.2287ms
+2022-02-07 19:33:28.278 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/crossmatchOperationHub?id=sA7gG2Neva8mF-yxl-F9aA - -
+2022-02-07 19:33:28.288 +03:00 [INF] Executing endpoint '/crossmatchOperationHub'
+2022-02-07 19:33:32.192 +03:00 [INF] Initializing.... 0
+2022-02-07 19:33:32.317 +03:00 [INF] Initializing.... 10
+2022-02-07 19:33:32.506 +03:00 [INF] Initializing.... 66.66667
+2022-02-07 19:33:32.569 +03:00 [INF] Initializing.... 100
+2022-02-07 19:33:49.047 +03:00 [ERR] BioBase Return code '-208'
+2022-02-07 19:33:49.645 +03:00 [ERR] BioBase Return code '-208'
+2022-02-07 19:33:49.841 +03:00 [ERR] BioBase Return code '-208'
+2022-02-07 19:33:50.019 +03:00 [ERR] BioBase Return code '-208'
+2022-02-07 19:33:50.201 +03:00 [ERR] BioBase Return code '-208'
+2022-02-07 19:33:50.892 +03:00 [ERR] BioBase Return code '-208'
+2022-02-07 19:33:51.153 +03:00 [ERR] BioBase Return code '-208'
+2022-02-07 19:37:03.304 +03:00 [INF] Now listening on: https://localhost:5001
+2022-02-07 19:37:03.350 +03:00 [INF] Now listening on: http://localhost:5000
+2022-02-07 19:37:03.352 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-02-07 19:37:03.352 +03:00 [INF] Hosting environment: Development
+2022-02-07 19:37:03.353 +03:00 [INF] Content root path: C:\NativeKit\SignalRHost
+2022-02-07 19:37:10.233 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/crossmatchOperationHub/negotiate?negotiateVersion=1 - 0
+2022-02-07 19:37:10.264 +03:00 [INF] Executing endpoint '/crossmatchOperationHub/negotiate'
+2022-02-07 19:37:10.292 +03:00 [INF] Executed endpoint '/crossmatchOperationHub/negotiate'
+2022-02-07 19:37:10.295 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/crossmatchOperationHub/negotiate?negotiateVersion=1 - 0 - 200 316 application/json 64.5257ms
+2022-02-07 19:37:10.356 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/crossmatchOperationHub?id=0fO2kS8UPEW7fFdJEsxmpA - -
+2022-02-07 19:37:10.368 +03:00 [INF] Executing endpoint '/crossmatchOperationHub'
+2022-02-07 19:37:13.321 +03:00 [INF] Initializing.... 0
+2022-02-07 19:37:13.507 +03:00 [INF] Initializing.... 10
+2022-02-07 19:37:13.631 +03:00 [INF] Initializing.... 40
+2022-02-07 19:37:13.694 +03:00 [INF] Initializing.... 100
+2022-02-07 19:38:08.004 +03:00 [INF] Now listening on: https://localhost:5001
+2022-02-07 19:38:08.054 +03:00 [INF] Now listening on: http://localhost:5000
+2022-02-07 19:38:08.056 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-02-07 19:38:08.057 +03:00 [INF] Hosting environment: Development
+2022-02-07 19:38:08.057 +03:00 [INF] Content root path: C:\NativeKit\SignalRHost
+2022-02-07 19:38:11.933 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/crossmatchOperationHub/negotiate?negotiateVersion=1 - 0
+2022-02-07 19:38:11.966 +03:00 [INF] Executing endpoint '/crossmatchOperationHub/negotiate'
+2022-02-07 19:38:11.995 +03:00 [INF] Executed endpoint '/crossmatchOperationHub/negotiate'
+2022-02-07 19:38:12.000 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/crossmatchOperationHub/negotiate?negotiateVersion=1 - 0 - 200 316 application/json 67.3319ms
+2022-02-07 19:38:12.007 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/crossmatchOperationHub?id=MokvFdmSQWmwnLXdUsqn5A - -
+2022-02-07 19:38:12.017 +03:00 [INF] Executing endpoint '/crossmatchOperationHub'
+2022-02-07 19:38:14.005 +03:00 [ERR] Object reference not set to an instance of an object.
+2022-02-07 19:38:14.067 +03:00 [ERR]    at SignalRHost.Hubs.CrossmatchOperationHub.<OnDisconnectedAsync>b__9_0() in C:\NativeKit\SignalRHost\Hubs\CrossmatchOperationHub.cs:line 55
+2022-02-07 19:38:14.072 +03:00 [INF] Executed endpoint '/crossmatchOperationHub'
+2022-02-07 19:38:14.074 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/crossmatchOperationHub?id=MokvFdmSQWmwnLXdUsqn5A - - - 101 - - 2066.9119ms
+2022-02-07 19:38:16.889 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/crossmatchOperationHub/negotiate?negotiateVersion=1 - 0
+2022-02-07 19:38:16.891 +03:00 [INF] Executing endpoint '/crossmatchOperationHub/negotiate'
+2022-02-07 19:38:16.892 +03:00 [INF] Executed endpoint '/crossmatchOperationHub/negotiate'
+2022-02-07 19:38:16.893 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/crossmatchOperationHub/negotiate?negotiateVersion=1 - 0 - 200 316 application/json 3.9886ms
+2022-02-07 19:38:16.896 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/crossmatchOperationHub?id=4i_xZNMmMGEPO3sJQsX__w - -
+2022-02-07 19:38:16.897 +03:00 [INF] Executing endpoint '/crossmatchOperationHub'
+2022-02-07 19:38:20.510 +03:00 [INF] Initializing.... 0
+2022-02-07 19:38:20.695 +03:00 [INF] Initializing.... 10
+2022-02-07 19:38:20.820 +03:00 [INF] Initializing.... 40
+2022-02-07 19:38:20.881 +03:00 [INF] Initializing.... 100
+2022-02-07 19:39:30.073 +03:00 [INF] Now listening on: https://localhost:5001
+2022-02-07 19:39:30.115 +03:00 [INF] Now listening on: http://localhost:5000
+2022-02-07 19:39:30.117 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-02-07 19:39:30.118 +03:00 [INF] Hosting environment: Development
+2022-02-07 19:39:30.119 +03:00 [INF] Content root path: C:\NativeKit\SignalRHost
+2022-02-07 19:39:30.305 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/crossmatchOperationHub/negotiate?negotiateVersion=1 - 0
+2022-02-07 19:39:30.336 +03:00 [INF] Executing endpoint '/crossmatchOperationHub/negotiate'
+2022-02-07 19:39:30.367 +03:00 [INF] Executed endpoint '/crossmatchOperationHub/negotiate'
+2022-02-07 19:39:30.370 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/crossmatchOperationHub/negotiate?negotiateVersion=1 - 0 - 200 316 application/json 66.2307ms
+2022-02-07 19:39:30.382 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/crossmatchOperationHub?id=AcolcpkGBAhPYrfqCSgMsQ - -
+2022-02-07 19:39:30.395 +03:00 [INF] Executing endpoint '/crossmatchOperationHub'
+2022-02-07 19:39:37.892 +03:00 [INF] Initializing.... 0
+2022-02-07 19:39:38.017 +03:00 [INF] Initializing.... 10
+2022-02-07 19:39:38.204 +03:00 [INF] Initializing.... 66.66667
+2022-02-07 19:39:38.266 +03:00 [INF] Initializing.... 100
+2022-02-07 19:41:25.806 +03:00 [INF] Executed endpoint '/crossmatchOperationHub'
+2022-02-07 19:41:25.810 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/crossmatchOperationHub?id=AcolcpkGBAhPYrfqCSgMsQ - - - 101 - - 115428.1413ms
+2022-02-07 19:46:00.356 +03:00 [INF] Now listening on: https://localhost:5001
+2022-02-07 19:46:00.398 +03:00 [INF] Now listening on: http://localhost:5000
+2022-02-07 19:46:00.402 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-02-07 19:46:00.403 +03:00 [INF] Hosting environment: Development
+2022-02-07 19:46:00.404 +03:00 [INF] Content root path: C:\NativeKit\SignalRHost
+2022-02-07 19:46:06.528 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/crossmatchOperationHub/negotiate?negotiateVersion=1 - 0
+2022-02-07 19:46:06.557 +03:00 [INF] Executing endpoint '/crossmatchOperationHub/negotiate'
+2022-02-07 19:46:06.587 +03:00 [INF] Executed endpoint '/crossmatchOperationHub/negotiate'
+2022-02-07 19:46:06.590 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/crossmatchOperationHub/negotiate?negotiateVersion=1 - 0 - 200 316 application/json 63.6310ms
+2022-02-07 19:46:06.657 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/crossmatchOperationHub?id=U5KRtpfSlIFZzI1PB0Kxyg - -
+2022-02-07 19:46:06.669 +03:00 [INF] Executing endpoint '/crossmatchOperationHub'
+2022-02-07 19:46:08.844 +03:00 [INF] Initializing.... 0
+2022-02-07 19:46:08.968 +03:00 [INF] Initializing.... 10
+2022-02-07 19:46:09.154 +03:00 [INF] Initializing.... 100
+2022-02-07 19:47:22.985 +03:00 [INF] Now listening on: https://localhost:5001
+2022-02-07 19:47:23.026 +03:00 [INF] Now listening on: http://localhost:5000
+2022-02-07 19:47:23.028 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-02-07 19:47:23.029 +03:00 [INF] Hosting environment: Development
+2022-02-07 19:47:23.029 +03:00 [INF] Content root path: C:\NativeKit\SignalRHost
+2022-02-07 19:47:27.640 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/crossmatchOperationHub/negotiate?negotiateVersion=1 - 0
+2022-02-07 19:47:27.669 +03:00 [INF] Executing endpoint '/crossmatchOperationHub/negotiate'
+2022-02-07 19:47:27.697 +03:00 [INF] Executed endpoint '/crossmatchOperationHub/negotiate'
+2022-02-07 19:47:27.704 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/crossmatchOperationHub/negotiate?negotiateVersion=1 - 0 - 200 316 application/json 64.8672ms
+2022-02-07 19:47:27.707 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/crossmatchOperationHub?id=GLpJRCKDQFXPM9m1FMM54g - -
+2022-02-07 19:47:27.718 +03:00 [INF] Executing endpoint '/crossmatchOperationHub'
+2022-02-07 19:47:31.221 +03:00 [INF] Initializing.... 0
+2022-02-07 19:47:31.344 +03:00 [INF] Initializing.... 10
+2022-02-07 19:47:31.535 +03:00 [INF] Initializing.... 100
+2022-02-07 19:48:22.121 +03:00 [INF] Executed endpoint '/crossmatchOperationHub'
+2022-02-07 19:48:22.125 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/crossmatchOperationHub?id=GLpJRCKDQFXPM9m1FMM54g - - - 101 - - 54416.9510ms
+2022-02-07 19:48:27.320 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/crossmatchOperationHub/negotiate?negotiateVersion=1 - 0
+2022-02-07 19:48:27.323 +03:00 [INF] Executing endpoint '/crossmatchOperationHub/negotiate'
+2022-02-07 19:48:27.324 +03:00 [INF] Executed endpoint '/crossmatchOperationHub/negotiate'
+2022-02-07 19:48:27.326 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/crossmatchOperationHub/negotiate?negotiateVersion=1 - 0 - 200 316 application/json 6.8389ms
+2022-02-07 19:48:27.395 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/crossmatchOperationHub?id=Uifyk4fDAr2eONVGku8IyA - -
+2022-02-07 19:48:27.396 +03:00 [INF] Executing endpoint '/crossmatchOperationHub'
+2022-02-07 19:48:29.507 +03:00 [INF] Initializing.... 0
+2022-02-07 19:48:29.630 +03:00 [INF] Initializing.... 10
+2022-02-07 19:48:29.817 +03:00 [INF] Initializing.... 66.66667
+2022-02-07 19:48:29.879 +03:00 [INF] Initializing.... 100
+2022-02-07 19:48:38.361 +03:00 [INF] Acquisition Started.
+2022-02-07 19:48:38.361 +03:00 [INF] Acquisition completed.
+2022-02-07 20:15:06.235 +03:00 [INF] Now listening on: https://localhost:5001
+2022-02-07 20:15:06.276 +03:00 [INF] Now listening on: http://localhost:5000
+2022-02-07 20:15:06.279 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-02-07 20:15:06.280 +03:00 [INF] Hosting environment: Development
+2022-02-07 20:15:06.280 +03:00 [INF] Content root path: C:\NativeKit\SignalRHost
+2022-02-07 20:15:06.675 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/crossmatchOperationHub/negotiate?negotiateVersion=1 - 0
+2022-02-07 20:15:06.706 +03:00 [INF] Executing endpoint '/crossmatchOperationHub/negotiate'
+2022-02-07 20:15:06.734 +03:00 [INF] Executed endpoint '/crossmatchOperationHub/negotiate'
+2022-02-07 20:15:06.738 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/crossmatchOperationHub/negotiate?negotiateVersion=1 - 0 - 200 316 application/json 64.3320ms
+2022-02-07 20:15:06.746 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/crossmatchOperationHub?id=80LSCJJs6ySCWZe_r-imig - -
+2022-02-07 20:15:06.757 +03:00 [INF] Executing endpoint '/crossmatchOperationHub'
+2022-02-07 20:15:12.077 +03:00 [INF] Initializing.... 0
+2022-02-07 20:15:12.202 +03:00 [INF] Initializing.... 10
+2022-02-07 20:15:12.388 +03:00 [INF] Initializing.... 66.66667
+2022-02-07 20:15:12.448 +03:00 [INF] Initializing.... 100
+2022-02-07 20:15:14.067 +03:00 [ERR] Unable to initilize device due BioBase Return code '102'
+2022-02-07 20:15:14.069 +03:00 [INF] Error while initializing device
+2022-02-07 20:15:32.028 +03:00 [ERR] BioBase Return code '-207'
+2022-02-07 20:15:34.095 +03:00 [ERR] BioBase Return code '-207'
+2022-02-07 20:15:36.146 +03:00 [ERR] BioBase Return code '-207'
+2022-02-07 20:15:37.039 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/crossmatchOperationHub/negotiate?negotiateVersion=1 - 0
+2022-02-07 20:15:37.040 +03:00 [INF] Executing endpoint '/crossmatchOperationHub/negotiate'
+2022-02-07 20:15:37.041 +03:00 [INF] Executed endpoint '/crossmatchOperationHub/negotiate'
+2022-02-07 20:15:37.042 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/crossmatchOperationHub/negotiate?negotiateVersion=1 - 0 - 200 316 application/json 2.9510ms
+2022-02-07 20:15:37.050 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/crossmatchOperationHub?id=oL084ZPS_w4DrClSe5lKlw - -
+2022-02-07 20:15:37.051 +03:00 [INF] Executing endpoint '/crossmatchOperationHub'
+2022-02-07 20:15:38.201 +03:00 [ERR] BioBase Return code '-207'
+2022-02-07 20:15:38.875 +03:00 [INF] Executed endpoint '/crossmatchOperationHub'
+2022-02-07 20:15:38.879 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/crossmatchOperationHub?id=80LSCJJs6ySCWZe_r-imig - - - 101 - - 32132.9993ms
+2022-02-07 20:15:42.068 +03:00 [INF] Initializing.... 0
+2022-02-07 20:15:42.254 +03:00 [INF] Initializing.... 10
+2022-02-07 20:15:42.440 +03:00 [INF] Initializing.... 100
+2022-02-07 20:18:18.109 +03:00 [INF] Now listening on: https://localhost:5001
+2022-02-07 20:18:18.150 +03:00 [INF] Now listening on: http://localhost:5000
+2022-02-07 20:18:18.152 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-02-07 20:18:18.152 +03:00 [INF] Hosting environment: Development
+2022-02-07 20:18:18.153 +03:00 [INF] Content root path: C:\NativeKit\SignalRHost
+2022-02-07 20:18:18.393 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/crossmatchOperationHub/negotiate?negotiateVersion=1 - 0
+2022-02-07 20:18:18.427 +03:00 [INF] Executing endpoint '/crossmatchOperationHub/negotiate'
+2022-02-07 20:18:18.456 +03:00 [INF] Executed endpoint '/crossmatchOperationHub/negotiate'
+2022-02-07 20:18:18.460 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/crossmatchOperationHub/negotiate?negotiateVersion=1 - 0 - 200 316 application/json 68.2860ms
+2022-02-07 20:18:18.461 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/crossmatchOperationHub?id=C0aFaFgnNqc5yFjf8LnFIg - -
+2022-02-07 20:18:18.472 +03:00 [INF] Executing endpoint '/crossmatchOperationHub'
+2022-02-07 20:18:21.451 +03:00 [INF] Initializing.... 0
+2022-02-07 20:18:21.575 +03:00 [INF] Initializing.... 10
+2022-02-07 20:18:21.823 +03:00 [INF] Initializing.... 100
+2022-02-07 20:18:30.617 +03:00 [INF] Acquisition Started.
+2022-02-07 20:18:30.617 +03:00 [INF] Acquisition completed.
+2022-02-07 20:18:37.571 +03:00 [INF] Executed endpoint '/crossmatchOperationHub'
+2022-02-07 20:18:37.574 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5000/crossmatchOperationHub?id=C0aFaFgnNqc5yFjf8LnFIg - - - 101 - - 19112.8792ms
+2022-02-07 20:19:13.989 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/crossmatchOperationHub/negotiate?negotiateVersion=1 - 0
+2022-02-07 20:19:13.991 +03:00 [INF] Executing endpoint '/crossmatchOperationHub/negotiate'
+2022-02-07 20:19:13.993 +03:00 [INF] Executed endpoint '/crossmatchOperationHub/negotiate'
+2022-02-07 20:19:13.996 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/crossmatchOperationHub/negotiate?negotiateVersion=1 - 0 - 200 316 application/json 7.1573ms
+2022-02-07 20:19:14.075 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/crossmatchOperationHub?id=OY9pMay3KoQk6LdpYR-eug - -
+2022-02-07 20:19:14.079 +03:00 [INF] Executing endpoint '/crossmatchOperationHub'
+2022-02-07 20:19:17.137 +03:00 [INF] Initializing.... 0
+2022-02-07 20:19:17.322 +03:00 [INF] Initializing.... 10
+2022-02-07 20:19:17.509 +03:00 [INF] Initializing.... 100
+2022-02-07 20:19:36.319 +03:00 [ERR] BioBase Return code '-208'
+2022-02-07 20:19:37.451 +03:00 [ERR] BioBase Return code '-208'
+2022-02-07 20:19:37.657 +03:00 [ERR] BioBase Return code '-208'
+2022-02-07 20:20:22.067 +03:00 [INF] Initializing.... 0
+2022-02-07 20:20:22.253 +03:00 [INF] Initializing.... 10
+2022-02-07 20:20:22.439 +03:00 [INF] Initializing.... 100
+2022-02-07 20:21:08.591 +03:00 [INF] Now listening on: https://localhost:5001
+2022-02-07 20:21:08.670 +03:00 [INF] Now listening on: http://localhost:5000
+2022-02-07 20:21:08.672 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-02-07 20:21:08.673 +03:00 [INF] Hosting environment: Development
+2022-02-07 20:21:08.673 +03:00 [INF] Content root path: C:\NativeKit\SignalRHost
+2022-02-07 20:21:08.689 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/crossmatchOperationHub/negotiate?negotiateVersion=1 - 0
+2022-02-07 20:21:08.723 +03:00 [INF] Executing endpoint '/crossmatchOperationHub/negotiate'
+2022-02-07 20:21:08.749 +03:00 [INF] Executed endpoint '/crossmatchOperationHub/negotiate'
+2022-02-07 20:21:08.751 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/crossmatchOperationHub/negotiate?negotiateVersion=1 - 0 - 200 316 application/json 64.9796ms
+2022-02-07 20:21:08.756 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/crossmatchOperationHub?id=1Xkm4I14B0ID7ZZQhaqAWg - -
+2022-02-07 20:21:08.768 +03:00 [INF] Executing endpoint '/crossmatchOperationHub'
+2022-02-07 20:21:11.717 +03:00 [INF] Initializing.... 0
+2022-02-07 20:21:11.844 +03:00 [INF] Initializing.... 10
+2022-02-07 20:21:12.026 +03:00 [INF] Initializing.... 40
+2022-02-07 20:21:12.088 +03:00 [INF] Initializing.... 100
+2022-02-07 20:21:25.957 +03:00 [ERR] BioBase Return code '-208'
+2022-02-07 20:21:26.351 +03:00 [ERR] BioBase Return code '-208'
+2022-02-07 20:21:26.548 +03:00 [ERR] BioBase Return code '-208'
+2022-02-07 20:21:26.835 +03:00 [ERR] BioBase Return code '-208'
+2022-02-07 20:21:27.005 +03:00 [ERR] BioBase Return code '-208'
+2022-02-07 20:21:27.179 +03:00 [ERR] BioBase Return code '-208'
+2022-02-07 20:21:29.459 +03:00 [ERR] BioBase Return code '-208'
+2022-02-07 20:29:16.857 +03:00 [INF] Now listening on: https://localhost:5001
+2022-02-07 20:29:16.897 +03:00 [INF] Now listening on: http://localhost:5000
+2022-02-07 20:29:16.900 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-02-07 20:29:16.900 +03:00 [INF] Hosting environment: Development
+2022-02-07 20:29:16.901 +03:00 [INF] Content root path: C:\NativeKit\SignalRHost
+2022-02-07 20:29:17.227 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/crossmatchOperationHub/negotiate?negotiateVersion=1 - 0
+2022-02-07 20:29:17.257 +03:00 [INF] Executing endpoint '/crossmatchOperationHub/negotiate'
+2022-02-07 20:29:17.286 +03:00 [INF] Executed endpoint '/crossmatchOperationHub/negotiate'
+2022-02-07 20:29:17.290 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/crossmatchOperationHub/negotiate?negotiateVersion=1 - 0 - 200 316 application/json 63.9334ms
+2022-02-07 20:29:17.299 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/crossmatchOperationHub?id=iqjJTb1EDxwa0sIWpc2F5A - -
+2022-02-07 20:29:17.309 +03:00 [INF] Executing endpoint '/crossmatchOperationHub'
+2022-02-07 20:29:20.136 +03:00 [INF] Initializing.... 0
+2022-02-07 20:29:20.259 +03:00 [INF] Initializing.... 10
+2022-02-07 20:29:20.449 +03:00 [INF] Initializing.... 53.333336
+2022-02-07 20:29:20.511 +03:00 [INF] Initializing.... 100
+2022-02-07 20:29:54.431 +03:00 [INF] Now listening on: https://localhost:5001
+2022-02-07 20:29:54.473 +03:00 [INF] Now listening on: http://localhost:5000
+2022-02-07 20:29:54.476 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-02-07 20:29:54.476 +03:00 [INF] Hosting environment: Development
+2022-02-07 20:29:54.477 +03:00 [INF] Content root path: C:\NativeKit\SignalRHost
+2022-02-07 20:29:58.520 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/crossmatchOperationHub/negotiate?negotiateVersion=1 - 0
+2022-02-07 20:29:58.549 +03:00 [INF] Executing endpoint '/crossmatchOperationHub/negotiate'
+2022-02-07 20:29:58.581 +03:00 [INF] Executed endpoint '/crossmatchOperationHub/negotiate'
+2022-02-07 20:29:58.587 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/crossmatchOperationHub/negotiate?negotiateVersion=1 - 0 - 200 316 application/json 66.8931ms
+2022-02-07 20:29:58.587 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/crossmatchOperationHub?id=_P44G4tElSIqVgfFooqt9w - -
+2022-02-07 20:29:58.598 +03:00 [INF] Executing endpoint '/crossmatchOperationHub'
+2022-02-07 20:30:10.748 +03:00 [INF] Initializing.... 0
+2022-02-07 20:30:10.871 +03:00 [INF] Initializing.... 10
+2022-02-07 20:30:11.058 +03:00 [INF] Initializing.... 100
+2022-02-07 20:42:00.343 +03:00 [INF] Now listening on: https://localhost:5001
+2022-02-07 20:42:00.392 +03:00 [INF] Now listening on: http://localhost:5000
+2022-02-07 20:42:00.394 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-02-07 20:42:00.395 +03:00 [INF] Hosting environment: Development
+2022-02-07 20:42:00.395 +03:00 [INF] Content root path: C:\NativeKit\SignalRHost
+2022-02-07 20:42:09.031 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/crossmatchOperationHub/negotiate?negotiateVersion=1 - 0
+2022-02-07 20:42:09.060 +03:00 [INF] Executing endpoint '/crossmatchOperationHub/negotiate'
+2022-02-07 20:42:09.089 +03:00 [INF] Executed endpoint '/crossmatchOperationHub/negotiate'
+2022-02-07 20:42:09.093 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/crossmatchOperationHub/negotiate?negotiateVersion=1 - 0 - 200 316 application/json 64.4465ms
+2022-02-07 20:42:09.100 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/crossmatchOperationHub?id=JbU869-_T_6f0ee-OQLWaQ - -
+2022-02-07 20:42:09.112 +03:00 [INF] Executing endpoint '/crossmatchOperationHub'
+2022-02-07 20:42:11.062 +03:00 [INF] Initializing.... 0
+2022-02-07 20:42:11.184 +03:00 [INF] Initializing.... 10
+2022-02-07 20:42:11.372 +03:00 [INF] Initializing.... 66.66667
+2022-02-07 20:42:11.435 +03:00 [INF] Initializing.... 100
+2022-02-07 20:43:41.478 +03:00 [INF] Now listening on: https://localhost:5001
+2022-02-07 20:43:41.518 +03:00 [INF] Now listening on: http://localhost:5000
+2022-02-07 20:43:41.520 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-02-07 20:43:41.521 +03:00 [INF] Hosting environment: Development
+2022-02-07 20:43:41.521 +03:00 [INF] Content root path: C:\NativeKit\SignalRHost
+2022-02-07 20:43:46.393 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5000/crossmatchOperationHub/negotiate?negotiateVersion=1 - 0
+2022-02-07 20:43:46.422 +03:00 [INF] Executing endpoint '/crossmatchOperationHub/negotiate'
+2022-02-07 20:43:46.450 +03:00 [INF] Executed endpoint '/crossmatchOperationHub/negotiate'
+2022-02-07 20:43:46.456 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5000/crossmatchOperationHub/negotiate?negotiateVersion=1 - 0 - 200 316 application/json 62.9179ms
+2022-02-07 20:43:46.465 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5000/crossmatchOperationHub?id=hu5QpMCQkuvj7oy0mK-BfQ - -
+2022-02-07 20:43:46.478 +03:00 [INF] Executing endpoint '/crossmatchOperationHub'
+2022-02-07 20:43:48.265 +03:00 [INF] Initializing.... 0
+2022-02-07 20:43:48.390 +03:00 [INF] Initializing.... 10
+2022-02-07 20:43:48.576 +03:00 [INF] Initializing.... 40
+2022-02-07 20:43:48.637 +03:00 [INF] Initializing.... 100
