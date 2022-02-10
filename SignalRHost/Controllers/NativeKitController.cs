@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace SignalRHost.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/")]
     [ApiController]
     public class NativeKitController : ControllerBase
     {
@@ -19,7 +19,7 @@ namespace SignalRHost.Controllers
             deviceServices = device;
         }
 
-        [HttpGet("allDevicesConnected")]
+        [HttpGet("list")]
         public async Task<ActionResult<List<DeviceDetails>>> DevicesConnected()
         {
             return await deviceServices.DevicesConnected();

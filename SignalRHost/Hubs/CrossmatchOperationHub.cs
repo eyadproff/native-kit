@@ -66,9 +66,7 @@ namespace SignalRHost.Hubs
             deviceType = capturingInfo.DeviceType;
             await Task.Run(() =>
             {
-                if (deviceType == "LScan")
-                {
-                    try
+                try
                     {
                         if (InitializeDevice(capturingInfo.CaptureType, "FingerprintFlat", capturingInfo.AutoCapture))
                         {
@@ -87,15 +85,8 @@ namespace SignalRHost.Hubs
                     {
                         _logger.LogError(ex.Message);
                     }
-                    finally
-                    {
-                       /* lscanWaitHandle.Reset();
-                        biobDevice?.Dispose();
-                        biobApi.Dispose();*/
-                    }
-                }
-                
-            });
+
+                });
         }
 
         [HubMethodName("stopCapturing")]
@@ -228,7 +219,7 @@ namespace SignalRHost.Hubs
                     Base64String = imageStr
                 };
 
-                Clients.All.SendAsync("sendLscanCapImage", imageDto).Wait();
+                Clients.All.SendAsync(Constant.LSCAN_STREAM, imageDto).Wait();
             }
             catch (Exception ex)
             {
@@ -251,7 +242,7 @@ namespace SignalRHost.Hubs
                 Base64String = imageStr
             };
 
-            Clients.All.SendAsync("sendLscanStreamImage", imageDto).Wait();
+            Clients.All.SendAsync(Constant.LSCAN_IMAGE, imageDto).Wait();
         }
 
         private void BiobDevice_AcquisitionComplete(object sender, BioBaseAcquisitionCompleteEventArgs e)
@@ -277,8 +268,7 @@ namespace SignalRHost.Hubs
                     DeviceName = "",
                     Base64String = imageStr
                 };
-
-                Clients.All.SendAsync("sendLscanCapImage", imageDto).Wait();
+                Clients.All.SendAsync(Constant.LSCAN_IMAGE, imageDto).Wait();
             }
             catch (Exception ex)
             {
@@ -294,7 +284,6 @@ namespace SignalRHost.Hubs
         {
             try
             {
-               
                 Clients.All.SendAsync("sendLscanQuality", imageDto).Wait();
             }
             catch (Exception ex)
@@ -322,12 +311,9 @@ namespace SignalRHost.Hubs
                 Base64String = imageStr
             };
 
-            Clients.All.SendAsync("sendLscanCapImage", imageDto).Wait();
+            Clients.All.SendAsync(Constant.LSCAN_IMAGE, imageDto).Wait();
         }
         #endregion
 
-
     }
-
-
 }

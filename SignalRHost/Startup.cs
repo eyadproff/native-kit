@@ -38,6 +38,7 @@ namespace SignalRHost
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UsePathBase("/nk");
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

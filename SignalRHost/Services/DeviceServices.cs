@@ -14,35 +14,58 @@ namespace SignalRHost.Services
         LseBioBaseApi biobApi = null;
         public async Task<List<DeviceDetails>> DevicesConnected()
         {
+            List<DeviceDetails> deviceDetails = new();
             try
             {
-                List<DeviceDetails> deviceDetails = new();
-
-                biobApi = new LseBioBaseApi();
-                biobApi.Open();
-
-                deviceDetails.Add(new DeviceDetails
-                {
-                    DeviceName = "Lscan",
-                    CountOfDevices = biobApi.NumberOfDevices
-                });
-
-                canonApi = new CanonAPI();
-
-                deviceDetails.Add(new DeviceDetails
-                {
-                    DeviceName = "Camera",
-                    CountOfDevices = canonApi.GetCameraList().Count
-                });
-
-                return deviceDetails;
+                deviceDetails.Add(await Canon());
+                deviceDetails.Add(await Lscan());
             }
             catch (Exception ex)
             {
                 Serilog.Log.Error(ex.Message + ex.StackTrace);
-                throw;
+                deviceDetails.Clear();
+                deviceDetails.Add(new DeviceDetails
+                {
+                    DeviceName = "",
+                    CountOfDevices = 0
+                });
             }
-            
+
+            return deviceDetails;
+        }
+
+        private async Task<DeviceDetails> Canon()
+        {
+            var device = new DeviceDetails();
+            device.DeviceName = "Canon";
+            device.CountOfDevices = 0;
+            try
+            {
+                canonApi = new CanonAPI();
+                device.CountOfDevices = canonApi.GetCameraList().Count;
+            }
+            catch (Exception ex)
+            {
+                Serilog.Log.Error(ex.Message + ex.StackTrace);
+            }
+            return device;
+        }
+        private async Task<DeviceDetails> Lscan()
+        {
+            var device = new DeviceDetails();
+            device.DeviceName = "Lscan";
+            device.CountOfDevices = 0;
+            try
+            {
+                biobApi = new LseBioBaseApi();
+                biobApi.Open();
+                device.CountOfDevices = biobApi.NumberOfDevices;
+            }
+            catch (Exception ex)
+            {
+                Serilog.Log.Error(ex.Message + ex.StackTrace);
+            }
+            return device;
         }
     }
 }

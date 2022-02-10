@@ -11,6 +11,7 @@ using System.Drawing;
 using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Transactions;
 
 namespace SignalRHost.Hubs
 {
@@ -29,28 +30,43 @@ namespace SignalRHost.Hubs
             _logger = logger;
         }
 
-        void InitCameraAndSDK() {
+        public bool InitCameraAndSDK()
+        {
+            bool result = false;
             try
             {
-                Console.WriteLine(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>> InitCameraAndSDK...");
                 canonApi = new CanonAPI();
-                camera = canonApi.GetCameraList()[0];
+
+                if (canonApi.GetCameraList().Count == 1)
+                {
+                    camera = canonApi.GetCameraList()[0];
+                    result = true;
+                }
+                else
+                {
+                    Clients.All.SendAsync(Constant.NK_STASUS, Constant.CANON_CASE_ONE);
+                }
             }
             catch (Exception e) {
                 LogUtitlity.LogException(_logger, e);
+                Clients.All.SendAsync(Constant.NK_STASUS, HubClientNotifier.GetExceptionClientNotification(e));
             }
+
+            return result;
         }
         
         void RegisterCameraEvents() {
             try
             {
-                Console.WriteLine(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>> RegisterCameraEvents...");
                 camera.LiveViewUpdated += Camera_LiveViewUpdated;
                 camera.StateChanged += Camera_StateChanged;
                 camera.DownloadReady += Camera_DownloadReady;
+                camera.CameraHasShutdown += Camera_Disconnected;
             }
             catch (Exception e) {
                 LogUtitlity.LogException(_logger, e);
+                
+                Clients.All.SendAsync(Constant.NK_STASUS, HubClientNotifier.GetExceptionClientNotification(e));
             }
         }
 
@@ -58,11 +74,12 @@ namespace SignalRHost.Hubs
             try {
                 camera?.CloseSession();
                 camera?.Dispose();
-                Console.WriteLine(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>> in Destructor...");
             }
             catch (Exception e)
             {
                 LogUtitlity.LogException(_logger, e);
+                
+                Clients.All.SendAsync(Constant.NK_STASUS, HubClientNotifier.GetExceptionClientNotification(e));
             }
 
         }
@@ -78,11 +95,14 @@ namespace SignalRHost.Hubs
                     camera.SetSetting(PropertyID.SaveTo, (int)SaveTo.Host);
                     camera.SetCapacity(4096, int.MaxValue);
                     camera.StartLiveView();
+                    Clients.All.SendAsync(Constant.NK_STASUS, "Start live view");
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine($">>>>>>>>>>>> in StartCapturing......... ::ex::{ex.StackTrace}");
                     LogUtitlity.LogException(_logger, ex);
+                    
+                    Clients.All.SendAsync(Constant.NK_STASUS, HubClientNotifier.GetExceptionClientNotification(ex));
+
                 }
             });
         }
@@ -95,10 +115,12 @@ namespace SignalRHost.Hubs
                 try
                 {
                     camera.StopLiveView();
+                    Clients.All.SendAsync(Constant.NK_STASUS, "Stop live view");
                 }
                 catch (Exception ex)
                 {
                     LogUtitlity.LogException(_logger, ex);
+                    Clients.All.SendAsync(Constant.NK_STASUS, HubClientNotifier.GetExceptionClientNotification(ex));
                 }
             });
         }
@@ -117,18 +139,18 @@ namespace SignalRHost.Hubs
                         camera.SetSetting(PropertyID.SaveTo, (int)SaveTo.Host);
                         camera.SetCapacity(4096, int.MaxValue);
                         camera.TakePhoto();
+                        //TODO:Test this if af fails 
+                        Clients.All.SendAsync(Constant.NK_STASUS, "Captured photo");
                     }
                     else
                     {
-                        //TODO: handle capture without live stream session is closed 
-                       
+                        Clients.All.SendAsync(Constant.NK_STASUS,Constant.CANON_CASE_TWO);
                     }
-
-
                 }
                 catch (Exception ex)
                 {
                     LogUtitlity.LogException(_logger, ex);
+                    Clients.All.SendAsync(Constant.NK_STASUS, HubClientNotifier.GetExceptionClientNotification(ex));
                 }
             });
         }
@@ -158,10 +180,10 @@ namespace SignalRHost.Hubs
                 DeviceName = "",
                 Base64String = imageStr
             };
-
+            
             try
             {
-                await Clients.All.SendAsync("sendCanonStreamImage", imageDto);
+                await Clients.All.SendAsync(Constant.CANON_STREAM, imageDto);
             }
             catch (Exception ex)
             {
@@ -201,7 +223,7 @@ namespace SignalRHost.Hubs
                         Base64String = imageStr
                     };
 
-                    Clients.All.SendAsync("sendCanonCapImage", imageDto).Wait();
+                    Clients.All.SendAsync(Constant.CANON_IMAGE, imageDto).Wait();
                 }
             }
             catch (Exception ex)
@@ -214,14 +236,26 @@ namespace SignalRHost.Hubs
                 canonWaitHandle.Set();
             }
         }
+        
+        private void Camera_Disconnected(Camera sender)
+        {
+            try
+            {
+                Clients.All.SendAsync(Constant.NK_STASUS,Constant.CANON_CASE_ONE);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message);
+            }
+        }
 
         #endregion
         public override Task OnConnectedAsync() {
            return Task.Run(() =>
             {
-                Console.WriteLine(">>>>>>>>>> in OnConnectedAsync");
-                InitCameraAndSDK();
-                RegisterCameraEvents();
+                if (InitCameraAndSDK()) {
+                    RegisterCameraEvents();
+                }
             });
         }
         public override Task OnDisconnectedAsync(Exception? exception)
@@ -237,6 +271,7 @@ namespace SignalRHost.Hubs
                 catch (Exception e)
                 {
                     LogUtitlity.LogException(_logger, e);
+                    Clients.All.SendAsync(Constant.NK_STASUS, HubClientNotifier.GetExceptionClientNotification(e));
                 }
             });
         }
