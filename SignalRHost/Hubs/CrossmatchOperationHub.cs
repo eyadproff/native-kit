@@ -71,13 +71,14 @@ namespace SignalRHost.Hubs
                         if (InitializeDevice(capturingInfo.CaptureType, "FingerprintFlat", capturingInfo.AutoCapture))
                         {
                             //SendInfoImageForLscan();
-                            Thread.Sleep(1000);
+                            Thread.Sleep(500);
                             biobDevice.BeginAcquisitionProcess();
                             lscanWaitHandle.WaitOne(2000);
                         }
                         else
                         {
                             lscanWaitHandle.Set();
+                            Clients.All.SendAsync(Constant.NK_STASUS, "Error while initializing device").Wait();
                             _logger.LogInformation("Error while initializing device");
                         }
                     }
@@ -99,7 +100,11 @@ namespace SignalRHost.Hubs
                     if (deviceType == "LScan")
                     {
                         biobDevice.CancelAcquisition();
-                        lscanWaitHandle.Set();
+                        //lscanWaitHandle.Set();
+                        lscanWaitHandle.Reset();
+                        biobDevice?.Dispose();
+                        biobApi.Dispose();
+                        Clients.All.SendAsync(Constant.NK_STASUS, "stop Capturing").Wait();
                     }
                   
                 }
@@ -120,6 +125,7 @@ namespace SignalRHost.Hubs
                     //SendCapImageForLscan();
                     biobDevice.RequestAcquisitionOverride();
                     biobDevice.CancelAcquisition();
+                    Clients.All.SendAsync(Constant.NK_STASUS, "Capture").Wait();
                 }
                 catch (Exception ex)
                 {
@@ -153,6 +159,7 @@ namespace SignalRHost.Hubs
 
                 if (biobDevice != null)
                 {
+                    Clients.All.SendAsync(Constant.NK_STASUS, $"Initializing.... Done").Wait();
                     biobDevice.Preview += BiobDevice_Preview;
                     biobDevice.AcquisitionStart += BiobDevice_AcquisitionStart;
                     biobDevice.AcquisitionComplete += BiobDevice_AcquisitionComplete;
@@ -202,6 +209,7 @@ namespace SignalRHost.Hubs
             {
                 initProgress = (int)e.ProgressValue;
                 _logger.LogInformation($"Initializing.... {e.ProgressValue}");
+               
             });
         }
 
@@ -247,11 +255,13 @@ namespace SignalRHost.Hubs
 
         private void BiobDevice_AcquisitionComplete(object sender, BioBaseAcquisitionCompleteEventArgs e)
         {
+            Clients.All.SendAsync(Constant.NK_STASUS, "Acquisition completed.");
             _logger.LogInformation("Acquisition completed.");
         }
 
         private void BiobDevice_AcquisitionStart(object sender, BioBaseAcquisitionStartEventArgs e)
         {
+            Clients.All.SendAsync(Constant.NK_STASUS, "Acquisition Started.");
             _logger.LogInformation("Acquisition Started.");
         }
 
@@ -265,7 +275,7 @@ namespace SignalRHost.Hubs
 
                 var imageDto = new CapturedImage
                 {
-                    DeviceName = "",
+                    DeviceName = "LScan",
                     Base64String = imageStr
                 };
                 Clients.All.SendAsync(Constant.LSCAN_IMAGE, imageDto).Wait();
