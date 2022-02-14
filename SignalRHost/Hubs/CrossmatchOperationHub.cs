@@ -35,19 +35,10 @@ namespace SignalRHost.Hubs
             biobDevice?.Dispose();
             biobApi.Dispose();
         }
-        public override Task OnConnectedAsync()
-        {
-            return Task.Run(() =>
-            {
-                Console.WriteLine(">>>>>>>>>> in OnConnectedAsync");
-                
-            });
-        }
         public override Task OnDisconnectedAsync(Exception? exception)
         {
             return Task.Run(() =>
             {
-                Console.WriteLine(">>>>>>>>>> in OnDisconnectedAsync");
                 try
                 {
                     lscanWaitHandle.Reset();
@@ -70,21 +61,23 @@ namespace SignalRHost.Hubs
                     {
                         if (InitializeDevice(capturingInfo.CaptureType, "FingerprintFlat", capturingInfo.AutoCapture))
                         {
-                            //SendInfoImageForLscan();
+                           
                             Thread.Sleep(500);
                             biobDevice.BeginAcquisitionProcess();
+                            Clients.All.SendAsync(Constant.NK_STASUS, $"Initializing.... Done").Wait();
                             lscanWaitHandle.WaitOne(2000);
                         }
                         else
                         {
                             lscanWaitHandle.Set();
-                            Clients.All.SendAsync(Constant.NK_STASUS, "Error while initializing device").Wait();
+                            Clients.All.SendAsync(Constant.NK_STASUS, "Error while initializing device, please reconnect").Wait();
                             _logger.LogInformation("Error while initializing device");
                         }
                     }
                     catch (Exception ex)
                     {
                         _logger.LogError(ex.Message);
+                        Clients.All.SendAsync(Constant.NK_STASUS, "Error while initializing device, please reconnect").Wait();
                     }
 
                 });
@@ -122,7 +115,6 @@ namespace SignalRHost.Hubs
             {
                 try
                 {
-                    //SendCapImageForLscan();
                     biobDevice.RequestAcquisitionOverride();
                     biobDevice.CancelAcquisition();
                     Clients.All.SendAsync(Constant.NK_STASUS, "Capture").Wait();
@@ -159,12 +151,12 @@ namespace SignalRHost.Hubs
 
                 if (biobDevice != null)
                 {
-                    Clients.All.SendAsync(Constant.NK_STASUS, $"Initializing.... Done").Wait();
+                    
                     biobDevice.Preview += BiobDevice_Preview;
                     biobDevice.AcquisitionStart += BiobDevice_AcquisitionStart;
                     biobDevice.AcquisitionComplete += BiobDevice_AcquisitionComplete;
                     biobDevice.DataAvailable += BiobDevice_DataAvailable;
-                    //biobDevice.ObjectQuality += BiobDevice_Quality;
+                    biobDevice.ObjectQuality += BiobDevice_Quality;
                     
                     if (autoCapture)
                         biobDevice.SetProperty(BioBaseConstants.DEV_PROP_AUTOCAPTURE_ON, BioBaseConstants.DEV_PROP_TRUE);
@@ -193,6 +185,7 @@ namespace SignalRHost.Hubs
                     biobDevice.SetVisualizationWindow(IntPtr.Zero, BioBaseConstants.DEV_ID_VIS_FINGER_WND, BioBOsType.BIOB_WIN32OS);
 
                     isDeviceInitialized = true;
+                   
                 }
             }
             catch (Exception ex)
@@ -234,31 +227,11 @@ namespace SignalRHost.Hubs
                 _logger.LogError(ex.Message);
             }
         }
-
-        private void SendInfoImageForLscan()
-        {
-            var dirPath = AppDomain.CurrentDomain.BaseDirectory;
-            var imagePath = Path.Combine(dirPath, "images/place.png");
-            var bmp = new Bitmap(imagePath);
-            var imageBytes = ImageUtitlity.ConvertBitmapToArray(bmp);
-
-            var imageStr = ImageUtitlity.ConvertImageToBase64String(imageBytes);
-
-            var imageDto = new CapturedImage
-            {
-                DeviceName = "",
-                Base64String = imageStr
-            };
-
-            Clients.All.SendAsync(Constant.LSCAN_IMAGE, imageDto).Wait();
-        }
-
         private void BiobDevice_AcquisitionComplete(object sender, BioBaseAcquisitionCompleteEventArgs e)
         {
             Clients.All.SendAsync(Constant.NK_STASUS, "Acquisition completed.");
             _logger.LogInformation("Acquisition completed.");
         }
-
         private void BiobDevice_AcquisitionStart(object sender, BioBaseAcquisitionStartEventArgs e)
         {
             Clients.All.SendAsync(Constant.NK_STASUS, "Acquisition Started.");
@@ -290,11 +263,11 @@ namespace SignalRHost.Hubs
             }
         }
 
-      /*  private void BiobDevice_Quality(object sender, BioBaseObjectQualityEventArgs e)
+        private void BiobDevice_Quality(object sender, BioBaseObjectQualityEventArgs e)
         {
             try
             {
-                Clients.All.SendAsync("sendLscanQuality", imageDto).Wait();
+                Clients.All.SendAsync("nkStatus", e.QualStateCount).Wait();
             }
             catch (Exception ex)
             {
@@ -305,7 +278,6 @@ namespace SignalRHost.Hubs
                 lscanWaitHandle.Set();
             }
         }
-*/
         private void SendCapImageForLscan()
         {
             var dirPath = AppDomain.CurrentDomain.BaseDirectory;
