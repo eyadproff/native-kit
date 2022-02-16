@@ -3,9 +3,9 @@ using System.Runtime.InteropServices;
 
 namespace Crossmatch.LSE
 {
-    public  class LseDeviceSdk: LseBioBaseInterop 
+    public  class LseDeviceSdk: LseBioBaseInterop
     {
-        private const string dllName = @"C:\NativekitTest\NativeApp\bin\Release\lib\crossmatch\LScanEssentialsBioBase4.dll";
+        private const string dllName = @"C:\Nativekit\NativeApp\bin\Release\lib\crossmatch\LScanEssentialsBioBase4.dll";//@"C:\NativeKit\lib\crossmatch\LScanEssentialsBioBase4.dll";//
         public LseDeviceSdk()
         {
             NativeOpenApiDelegate = NativeOpen;

@@ -7,6 +7,6 @@ namespace SignalRHost.Services
 {
     public interface IDeviceServices
     {
-        public Task<List<DeviceDetails>> DevicesConnected();
+        public Task<Devices> DevicesConnected();
     }
 }

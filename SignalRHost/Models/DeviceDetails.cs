@@ -7,11 +7,17 @@ using System.Threading.Tasks;
 namespace SignalRHost.Models
 {
     [Serializable]
+    public class Devices
+    {
+        public List<DeviceDetails> devices { get; set; }
+    }
+    
+    [Serializable]
     public class DeviceDetails
     {
-        [JsonProperty("device")]
         public string DeviceName { get; set; }
-        [JsonProperty("countOfDevices")]
         public int CountOfDevices { get; set; }
     }
+
+    
 }

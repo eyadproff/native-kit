@@ -12,13 +12,15 @@ namespace SignalRHost.Services
     {
         CanonAPI canonApi;
         LseBioBaseApi biobApi = null;
-        public async Task<List<DeviceDetails>> DevicesConnected()
+        public async Task<Devices> DevicesConnected()
         {
+            Devices devices = new();
             List<DeviceDetails> deviceDetails = new();
             try
             {
                 deviceDetails.Add(await Canon());
                 deviceDetails.Add(await Lscan());
+                devices.devices = deviceDetails;
             }
             catch (Exception ex)
             {
@@ -31,7 +33,7 @@ namespace SignalRHost.Services
                 });
             }
 
-            return deviceDetails;
+            return devices;
         }
 
         private async Task<DeviceDetails> Canon()

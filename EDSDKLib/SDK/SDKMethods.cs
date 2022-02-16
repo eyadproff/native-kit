@@ -20,8 +20,9 @@ namespace EOSDigital.SDK
 
         /// <summary>
         /// The path to the Canon SDK DLL
+        /// 
         /// </summary>
-        public const string DllPath = @"C:\NativekitTest\NativeApp\bin\Release\lib\canon\EDSDK.dll";
+        public const string DllPath = @"C:\Nativekit\NativeApp\bin\Release\lib\canon\EDSDK.dll";//@"C:\CD_SDK\CanonDll\EDSDKv131300W\EDSDKv131300W\Windows\EDSDK_64\Dll\EDSDK.dll";//
 
         #region Version Check
 

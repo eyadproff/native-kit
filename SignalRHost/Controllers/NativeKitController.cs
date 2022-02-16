@@ -20,7 +20,7 @@ namespace SignalRHost.Controllers
         }
 
         [HttpGet("list")]
-        public async Task<ActionResult<List<DeviceDetails>>> DevicesConnected()
+        public async Task<ActionResult<Devices>> DevicesConnected()
         {
             return await deviceServices.DevicesConnected();
         }
