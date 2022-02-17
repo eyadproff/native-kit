@@ -19,7 +19,7 @@ namespace SignalRHost.Hubs
     {
 
         //EOS Canon
-        ManualResetEvent canonWaitHandle = new ManualResetEvent(false);
+        //ManualResetEvent canonWaitHandle = new ManualResetEvent(false);
         CanonAPI canonApi;
         Camera camera;
 
@@ -44,12 +44,12 @@ namespace SignalRHost.Hubs
                 }
                 else
                 {
-                    Clients.All.SendAsync(Constant.NK_STASUS, Constant.CANON_CASE_ONE);
+                    Clients.All.SendAsync(Constant.NK_STATUS, Constant.CANON_CASE_ONE);
                 }
             }
             catch (Exception e) {
                 LogUtitlity.LogException(_logger, e);
-                Clients.All.SendAsync(Constant.NK_STASUS, HubClientNotifier.GetExceptionClientNotification(e));
+                Clients.All.SendAsync(Constant.NK_STATUS, HubClientNotifier.GetExceptionClientNotification(e));
             }
 
             return result;
@@ -66,7 +66,7 @@ namespace SignalRHost.Hubs
             catch (Exception e) {
                 LogUtitlity.LogException(_logger, e);
                 
-                Clients.All.SendAsync(Constant.NK_STASUS, HubClientNotifier.GetExceptionClientNotification(e));
+                Clients.All.SendAsync(Constant.NK_STATUS, HubClientNotifier.GetExceptionClientNotification(e));
             }
         }
 
@@ -79,7 +79,7 @@ namespace SignalRHost.Hubs
             {
                 LogUtitlity.LogException(_logger, e);
                 
-                Clients.All.SendAsync(Constant.NK_STASUS, HubClientNotifier.GetExceptionClientNotification(e));
+                Clients.All.SendAsync(Constant.NK_STATUS, HubClientNotifier.GetExceptionClientNotification(e));
             }
 
         }
@@ -95,13 +95,13 @@ namespace SignalRHost.Hubs
                     camera.SetSetting(PropertyID.SaveTo, (int)SaveTo.Host);
                     camera.SetCapacity(4096, int.MaxValue);
                     camera.StartLiveView();
-                    Clients.All.SendAsync(Constant.NK_STASUS, "Start live view");
+                    Clients.All.SendAsync(Constant.NK_STATUS, "Start live view");
                 }
                 catch (Exception ex)
                 {
                     LogUtitlity.LogException(_logger, ex);
                     
-                    Clients.All.SendAsync(Constant.NK_STASUS, HubClientNotifier.GetExceptionClientNotification(ex));
+                    Clients.All.SendAsync(Constant.NK_STATUS, HubClientNotifier.GetExceptionClientNotification(ex));
 
                 }
             });
@@ -115,12 +115,12 @@ namespace SignalRHost.Hubs
                 try
                 {
                     camera.StopLiveView();
-                    Clients.All.SendAsync(Constant.NK_STASUS, "Stop live view");
+                    Clients.All.SendAsync(Constant.NK_STATUS, "Stop live view");
                 }
                 catch (Exception ex)
                 {
                     LogUtitlity.LogException(_logger, ex);
-                    Clients.All.SendAsync(Constant.NK_STASUS, HubClientNotifier.GetExceptionClientNotification(ex));
+                    Clients.All.SendAsync(Constant.NK_STATUS, HubClientNotifier.GetExceptionClientNotification(ex));
                 }
             });
         }
@@ -131,7 +131,7 @@ namespace SignalRHost.Hubs
             
            Task.Run(() =>
             {
-                Console.WriteLine("capture");
+                //Console.WriteLine("capture");
                 try
                 {
                     if (camera.SessionOpen)
@@ -140,17 +140,17 @@ namespace SignalRHost.Hubs
                         camera.SetCapacity(4096, int.MaxValue);
                         camera.TakePhoto();
                         //TODO:Test this if af fails 
-                        Clients.All.SendAsync(Constant.NK_STASUS, "Captured photo");
+                        Clients.All.SendAsync(Constant.NK_STATUS, "Captured photo");
                     }
                     else
                     {
-                        Clients.All.SendAsync(Constant.NK_STASUS,Constant.CANON_CASE_TWO);
+                        Clients.All.SendAsync(Constant.NK_STATUS, Constant.CANON_CASE_TWO);
                     }
                 }
                 catch (Exception ex)
                 {
                     LogUtitlity.LogException(_logger, ex);
-                    Clients.All.SendAsync(Constant.NK_STASUS, HubClientNotifier.GetExceptionClientNotification(ex));
+                    Clients.All.SendAsync(Constant.NK_STATUS, HubClientNotifier.GetExceptionClientNotification(ex));
                 }
             });
         }
@@ -231,17 +231,17 @@ namespace SignalRHost.Hubs
                 _logger.LogError(ex.Message);
             }
 
-            finally
-            {
-                canonWaitHandle.Set();
-            }
+            //finally
+            //{
+            //    canonWaitHandle.Set();
+            //}
         }
         
         private void Camera_Disconnected(Camera sender)
         {
             try
             {
-                Clients.All.SendAsync(Constant.NK_STASUS,Constant.CANON_CASE_ONE);
+                Clients.All.SendAsync(Constant.NK_STATUS, Constant.CANON_CASE_ONE);
             }
             catch (Exception ex)
             {
@@ -262,7 +262,7 @@ namespace SignalRHost.Hubs
         {
             return Task.Run(() =>
             {
-                Console.WriteLine(">>>>>>>>>> in OnDisconnectedAsync");
+                //Console.WriteLine(">>>>>>>>>> in OnDisconnectedAsync");
                 try
                 {
                     camera?.CloseSession();
@@ -271,7 +271,7 @@ namespace SignalRHost.Hubs
                 catch (Exception e)
                 {
                     LogUtitlity.LogException(_logger, e);
-                    Clients.All.SendAsync(Constant.NK_STASUS, HubClientNotifier.GetExceptionClientNotification(e));
+                    Clients.All.SendAsync(Constant.NK_STATUS, HubClientNotifier.GetExceptionClientNotification(e));
                 }
             });
         }
