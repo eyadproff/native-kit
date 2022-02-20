@@ -92,9 +92,18 @@ namespace SignalRHost.Hubs
                 try
                 {
                     camera.OpenSession();
-                    camera.SetSetting(PropertyID.SaveTo, (int)SaveTo.Host);
+                    
+                    // Added settings to override biokit settings (after biokit connects to the camera, live view doesnt work anymore..)
+                    camera.SetSetting(PropertyID.SaveTo, (int)SaveTo.Camera);
+                    camera.SetSetting(PropertyID.Evf_AFMode, (int)EvfAFMode.LiveFace);
+                    camera.SetSetting(PropertyID.Evf_Mode, 1); // 1- enable live view, 0- disable live view
+                    camera.SetSetting(PropertyID.Evf_OutputDevice, (int)EvfOutputDevice.PC);
+                    camera.SetSetting(PropertyID.ImageQuality, (int)ImageQuality.Small1JpegFine);
+
                     camera.SetCapacity(4096, int.MaxValue);
+                    
                     camera.StartLiveView();
+
                     Clients.All.SendAsync(Constant.NK_STATUS, "Start live view");
                 }
                 catch (Exception ex)
@@ -230,11 +239,6 @@ namespace SignalRHost.Hubs
             {
                 _logger.LogError(ex.Message);
             }
-
-            //finally
-            //{
-            //    canonWaitHandle.Set();
-            //}
         }
         
         private void Camera_Disconnected(Camera sender)
