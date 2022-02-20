@@ -61,17 +61,17 @@ namespace SignalRHost.Hubs
                 {
                     if (!TryParse<CaptureType>(capturingInfo.CaptureType, out var captureType))
                     {
-                        Clients.All.SendAsync(Constant.NK_STASUS, Constant.LSCAN_CASE_ONE).Wait();
+                        Clients.All.SendAsync(Constant.NK_STATUS, Constant.LSCAN_CASE_ONE).Wait();
                         return;
                     }
                     if (InitializeDevice(captureType.ToString(), "FingerprintFlat", true))
                     {
                         biobDevice.BeginAcquisitionProcess();
-                        Clients.All.SendAsync(Constant.NK_STASUS, $"Initializing.... Done").Wait();
+                        Clients.All.SendAsync(Constant.NK_STATUS, $"Initializing.... Done").Wait();
                     }
                     else
                     {
-                        Clients.All.SendAsync(Constant.NK_STASUS, Constant.LSCAN_CASE_TWO).Wait();
+                        Clients.All.SendAsync(Constant.NK_STATUS, Constant.LSCAN_CASE_TWO).Wait();
                         _logger.LogInformation(Constant.LSCAN_CASE_TWO);
                     }
 
@@ -79,7 +79,7 @@ namespace SignalRHost.Hubs
                 catch (Exception ex)
                 {
                     LogUtitlity.LogException(_logger, ex);
-                    Clients.All.SendAsync(Constant.NK_STASUS, Constant.LSCAN_CASE_TWO).Wait();
+                    Clients.All.SendAsync(Constant.NK_STATUS, Constant.LSCAN_CASE_TWO).Wait();
                 }
 
             });
@@ -96,7 +96,7 @@ namespace SignalRHost.Hubs
                         biobDevice.CancelAcquisition();
                         biobDevice?.Dispose();
                         biobApi.Dispose();
-                        Clients.All.SendAsync(Constant.NK_STASUS, "stop Capturing").Wait();
+                        Clients.All.SendAsync(Constant.NK_STATUS, "stop Capturing").Wait();
                 }
                 catch (Exception ex)
                 {
@@ -114,7 +114,7 @@ namespace SignalRHost.Hubs
                 {
                     biobDevice.RequestAcquisitionOverride();
                     biobDevice.CancelAcquisition();
-                    Clients.All.SendAsync(Constant.NK_STASUS, "Capture").Wait();
+                    Clients.All.SendAsync(Constant.NK_STATUS, "Capture").Wait();
                 }
                 catch (Exception ex)
                 {
@@ -198,7 +198,7 @@ namespace SignalRHost.Hubs
             ThreadPool.QueueUserWorkItem(state =>
             {
                 initProgress = (int)e.ProgressValue;
-                Clients.All.SendAsync(Constant.NK_STASUS, $"Initializing.... {e.ProgressValue}").Wait();
+                Clients.All.SendAsync(Constant.NK_STATUS, $"Initializing.... {e.ProgressValue}").Wait();
                 _logger.LogInformation($"Initializing.... {e.ProgressValue}");
                
             });
@@ -227,12 +227,12 @@ namespace SignalRHost.Hubs
         }
         private void BiobDevice_AcquisitionComplete(object sender, BioBaseAcquisitionCompleteEventArgs e)
         {
-            Clients.All.SendAsync(Constant.NK_STASUS, "Acquisition completed.");
+            Clients.All.SendAsync(Constant.NK_STATUS, "Acquisition completed.");
             _logger.LogInformation("Acquisition completed.");
         }
         private void BiobDevice_AcquisitionStart(object sender, BioBaseAcquisitionStartEventArgs e)
         {
-            Clients.All.SendAsync(Constant.NK_STASUS, "Acquisition Started.");
+            Clients.All.SendAsync(Constant.NK_STATUS, "Acquisition Started.");
             _logger.LogInformation("Acquisition Started.");
         }
 
