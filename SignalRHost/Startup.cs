@@ -23,7 +23,7 @@ namespace SignalRHost
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddCors();
-            services.AddScoped<IDeviceServices, DeviceServices>();
+            services.AddScoped<IServices, Services.Services>();
             services.AddSignalR();
             services.AddSingleton<CameraOperationHub>();
             services.AddSingleton<CrossmatchOperationHub>();

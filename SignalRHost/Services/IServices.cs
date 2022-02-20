@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace SignalRHost.Services
 {
-    public interface IDeviceServices
+    public interface IServices
     {
         public Task<Devices> DevicesConnected();
     }

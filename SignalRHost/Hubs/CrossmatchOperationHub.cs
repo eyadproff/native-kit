@@ -11,6 +11,7 @@ using System.Drawing;
 using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
+using static System.Enum;
 
 namespace SignalRHost.Hubs
 {
@@ -54,33 +55,34 @@ namespace SignalRHost.Hubs
         [HubMethodName("startCapturing")]
         public async Task StartCapturing(CapturingInfo capturingInfo)
         {
-            deviceType = capturingInfo.DeviceType;
             await Task.Run(() =>
             {
                 try
+                {
+                    if (!TryParse<CaptureType>(capturingInfo.CaptureType, out var captureType))
                     {
-                        if (InitializeDevice(capturingInfo.CaptureType, "FingerprintFlat", capturingInfo.AutoCapture))
-                        {
-                           
-                            Thread.Sleep(500);
-                            biobDevice.BeginAcquisitionProcess();
-                            Clients.All.SendAsync(Constant.NK_STASUS, $"Initializing.... Done").Wait();
-                            lscanWaitHandle.WaitOne(2000);
-                        }
-                        else
-                        {
-                            lscanWaitHandle.Set();
-                            Clients.All.SendAsync(Constant.NK_STASUS, "Error while initializing device, please reconnect").Wait();
-                            _logger.LogInformation("Error while initializing device");
-                        }
+                        Clients.All.SendAsync(Constant.NK_STASUS, Constant.LSCAN_CASE_ONE).Wait();
+                        return;
                     }
-                    catch (Exception ex)
+                    if (InitializeDevice(captureType.ToString(), "FingerprintFlat", true))
                     {
-                        _logger.LogError(ex.Message);
-                        Clients.All.SendAsync(Constant.NK_STASUS, "Error while initializing device, please reconnect").Wait();
+                        biobDevice.BeginAcquisitionProcess();
+                        Clients.All.SendAsync(Constant.NK_STASUS, $"Initializing.... Done").Wait();
+                    }
+                    else
+                    {
+                        Clients.All.SendAsync(Constant.NK_STASUS, Constant.LSCAN_CASE_TWO).Wait();
+                        _logger.LogInformation(Constant.LSCAN_CASE_TWO);
                     }
 
-                });
+                }
+                catch (Exception ex)
+                {
+                    LogUtitlity.LogException(_logger, ex);
+                    Clients.All.SendAsync(Constant.NK_STASUS, Constant.LSCAN_CASE_TWO).Wait();
+                }
+
+            });
         }
 
         [HubMethodName("stopCapturing")]
@@ -90,20 +92,15 @@ namespace SignalRHost.Hubs
             {
                 try
                 {
-                    if (deviceType == "LScan")
-                    {
+
                         biobDevice.CancelAcquisition();
-                        //lscanWaitHandle.Set();
-                        lscanWaitHandle.Reset();
                         biobDevice?.Dispose();
                         biobApi.Dispose();
                         Clients.All.SendAsync(Constant.NK_STASUS, "stop Capturing").Wait();
-                    }
-                  
                 }
                 catch (Exception ex)
                 {
-                    _logger.LogError(ex.Message);
+                    LogUtitlity.LogException(_logger, ex);
                 }
             });
         }
@@ -121,7 +118,7 @@ namespace SignalRHost.Hubs
                 }
                 catch (Exception ex)
                 {
-                    _logger.LogError(ex.Message);
+                    LogUtitlity.LogException(_logger, ex);
                 }
             });
         }
@@ -183,14 +180,14 @@ namespace SignalRHost.Hubs
                     biobDevice.CurrentImpression = impressionType;
 
                     biobDevice.SetVisualizationWindow(IntPtr.Zero, BioBaseConstants.DEV_ID_VIS_FINGER_WND, BioBOsType.BIOB_WIN32OS);
-
+                    
                     isDeviceInitialized = true;
                    
                 }
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex.Message);
+                LogUtitlity.LogException(_logger, ex);
             }
 
             return isDeviceInitialized;
@@ -201,6 +198,7 @@ namespace SignalRHost.Hubs
             ThreadPool.QueueUserWorkItem(state =>
             {
                 initProgress = (int)e.ProgressValue;
+                Clients.All.SendAsync(Constant.NK_STASUS, $"Initializing.... {e.ProgressValue}").Wait();
                 _logger.LogInformation($"Initializing.... {e.ProgressValue}");
                
             });
@@ -224,7 +222,7 @@ namespace SignalRHost.Hubs
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex.Message);
+                LogUtitlity.LogException(_logger, ex);
             }
         }
         private void BiobDevice_AcquisitionComplete(object sender, BioBaseAcquisitionCompleteEventArgs e)
@@ -255,11 +253,7 @@ namespace SignalRHost.Hubs
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex.Message);
-            }
-            finally
-            {
-                lscanWaitHandle.Set();
+                LogUtitlity.LogException(_logger, ex);
             }
         }
 
@@ -271,11 +265,7 @@ namespace SignalRHost.Hubs
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex.Message);
-            }
-            finally
-            {
-                lscanWaitHandle.Set();
+                LogUtitlity.LogException(_logger, ex);
             }
         }
         private void SendCapImageForLscan()

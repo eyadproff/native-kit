@@ -8,10 +8,8 @@ using System.Threading.Tasks;
 
 namespace SignalRHost.Services
 {
-    public class DeviceServices : IDeviceServices
+    public class Services : IServices
     {
-        CanonAPI canonApi;
-        LseBioBaseApi biobApi = null;
         public async Task<Devices> DevicesConnected()
         {
             Devices devices = new();
@@ -38,6 +36,7 @@ namespace SignalRHost.Services
 
         private async Task<DeviceDetails> Canon()
         {
+            CanonAPI canonApi;
             var device = new DeviceDetails();
             device.DeviceName = "Canon";
             device.CountOfDevices = 0;
@@ -55,6 +54,8 @@ namespace SignalRHost.Services
         private async Task<DeviceDetails> Lscan()
         {
             var device = new DeviceDetails();
+            LseBioBaseApi biobApi = null;
+
             device.DeviceName = "Lscan";
             device.CountOfDevices = 0;
             try

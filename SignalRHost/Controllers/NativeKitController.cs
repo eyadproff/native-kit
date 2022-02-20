@@ -13,16 +13,16 @@ namespace SignalRHost.Controllers
     [ApiController]
     public class NativeKitController : ControllerBase
     {
-        private readonly IDeviceServices deviceServices;
-        public NativeKitController(IDeviceServices device)
+        private readonly IServices _services;
+        public NativeKitController(IServices services)
         {
-            deviceServices = device;
+            _services = services;
         }
 
         [HttpGet("list")]
         public async Task<ActionResult<Devices>> DevicesConnected()
         {
-            return await deviceServices.DevicesConnected();
+            return await _services.DevicesConnected();
         }
     }
 }

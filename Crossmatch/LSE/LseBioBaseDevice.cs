@@ -116,7 +116,8 @@ namespace Crossmatch.LSE
         {
             string ledType = GetProperty(BioBaseConstants.DEV_PROP_DEVICE_LED_TYPE);
             string keyType = GetProperty(BioBaseConstants.DEV_PROP_DEVICE_KEYPAD_TYPE);
-
+           
+            
             if (ledType == BioBaseConstants.DEV_PROP_LED_TYPE_LSCAN)
                 DeviceGuidanceType = GuidanceType.GuidanceTypeLScan;
             else if (ledType == BioBaseConstants.DEV_PROP_LED_TYPE_STATUS)
@@ -136,7 +137,7 @@ namespace Crossmatch.LSE
                 else
                     DeviceGuidanceType = GuidanceType.GuidanceTypeNone;
             }
-
+            
             if (keyType == BioBaseConstants.DEV_PROP_KEYPAD_2_KEYS)
                 DeviceInputType = InputType.InputType2Key;
             else if (keyType == BioBaseConstants.DEV_PROP_KEYPAD_4_KEYS)
@@ -153,6 +154,8 @@ namespace Crossmatch.LSE
         {
             return LseInterop.IsDeviceReady(DeviceInfo.DeviceId);
         }
+        
+        
 
         public bool IsDeviceOpen()
         {
@@ -241,6 +244,7 @@ namespace Crossmatch.LSE
 
         private void OnDataAvailable([MarshalAs(UnmanagedType.LPStr)] string deviceId, IntPtr ptrContext, int dataStatus, IntPtr ptrData, int detectedObjects)
         {
+            Console.WriteLine("OnDataAvailable");
             if (DataAvailable != null)
             {
                 if ((dataStatus >= (int)BioBErrorCode.BIOB_SUCCESS) && (ptrData != IntPtr.Zero))
