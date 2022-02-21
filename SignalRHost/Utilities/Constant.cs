@@ -11,6 +11,8 @@
         public const string NKM_LOGS_PATH = "nkStatus";
         public const string NK_LOGS_PATH = "nkStatus";
         public const string SERVER_URL = "nkStatus";
+        public const string USER_NAME = "test";
+        public const string PASSWORD = "test";
         
         #endregion Logs Constant
 

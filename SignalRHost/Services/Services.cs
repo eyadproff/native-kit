@@ -6,7 +6,9 @@ using System.Collections.Generic;
 using System.IO;
 using System.IO.Compression;
 using System.Linq;
+using System.Net;
 using System.Net.Http;
+using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Net.Http.Headers;
 using Newtonsoft.Json;
@@ -134,6 +136,13 @@ namespace SignalRHost.Services
                 {
                     throw new FileNotFoundException($"File [{zipPath}]not found.");
                 }
+                ServicePointManager.Expect100Continue = true;
+                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+                ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
+
+                var byteArray = Encoding.ASCII.GetBytes($"{Constant.USER_NAME}:{Constant.PASSWORD}");
+                client.DefaultRequestHeaders.Authorization =
+                    new System.Net.Http.Headers.AuthenticationHeaderValue("Basic", Convert.ToBase64String(byteArray));
                 using var form = new MultipartFormDataContent();
                 using var fileContent = new ByteArrayContent(await File.ReadAllBytesAsync(zipPath));
                 var mediaType = new MediaTypeHeaderValue("multipart/form-data");
