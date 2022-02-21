@@ -8,5 +8,6 @@ namespace SignalRHost.Services
     public interface IServices
     {
         public Task<Devices> DevicesConnected();
+        public Task<string> SendLogs();
     }
 }
