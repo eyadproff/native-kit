@@ -93,8 +93,7 @@ namespace SignalRHost.Hubs
                 {
                     camera.OpenSession();
                     
-                    // Added settings to override biokit settings (after biokit connects to the camera, live view doesnt work anymore..)
-                    camera.SetSetting(PropertyID.SaveTo, (int)SaveTo.Camera);
+                    // Added settings to override biokit settings (after biokit connects to the camera, live view doesnt work anymore..) 
                     camera.SetSetting(PropertyID.Evf_AFMode, (int)EvfAFMode.LiveFace);
                     camera.SetSetting(PropertyID.Evf_Mode, 1); // 1- enable live view, 0- disable live view
                     camera.SetSetting(PropertyID.Evf_OutputDevice, (int)EvfOutputDevice.PC);
@@ -147,6 +146,7 @@ namespace SignalRHost.Hubs
                     {
                         camera.SetSetting(PropertyID.SaveTo, (int)SaveTo.Host);
                         camera.SetCapacity(4096, int.MaxValue);
+
                         camera.TakePhoto();
                         //TODO:Test this if af fails 
                         Clients.All.SendAsync(Constant.NK_STATUS, "Captured photo");
