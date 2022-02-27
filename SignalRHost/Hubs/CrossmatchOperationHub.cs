@@ -261,7 +261,8 @@ namespace SignalRHost.Hubs
         {
             try
             {
-                Clients.All.SendAsync("nkStatus", e.QualStateCount).Wait();
+                // Live quality feedback - commented and may be used later if required
+                //Clients.All.SendAsync("nkStatus", e.QualStateCount).Wait();
             }
             catch (Exception ex)
             {
