@@ -34,5 +34,10 @@ namespace SignalRHost.Controllers
             return _services.SendLogs();
         }
 
+        [HttpGet("health")]
+        public Task<string> Health()
+        {
+            return _services.Health();
+        }
     }
 }

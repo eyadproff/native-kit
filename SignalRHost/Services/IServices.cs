@@ -9,5 +9,6 @@ namespace SignalRHost.Services
     {
         public Task<Devices> DevicesConnected();
         public Task<string> SendLogs();
+        public Task<string> Health();
     }
 }

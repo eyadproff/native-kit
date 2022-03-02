@@ -19,7 +19,7 @@ namespace SignalRHost
                     .Enrich.FromLogContext()
                     .WriteTo.Console()
                     .WriteTo.File(filePath, rollingInterval: RollingInterval.Day
-                        , outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} {Message:lj}{NewLine}{Exception}")
+                        , outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} {Message:lj}{NewLine}{Exception}", shared: true)
                     .CreateLogger();
 
                 CreateHostBuilder(args).Build().Run();

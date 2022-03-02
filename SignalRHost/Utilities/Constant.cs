@@ -6,11 +6,17 @@
         
         #region Logs Constant
 
-        public const string NKM_ZIP_PATH = "nkStatus";
-        public const string NK_ZIP_PATH = "nkStatus";
-        public const string NKM_LOGS_PATH = "nkStatus";
-        public const string NK_LOGS_PATH = "nkStatus";
-        public const string SERVER_URL = "nkStatus";
+        public const string NKM_ZIP_PATH = @"C:\NativeKit\NKM\logs.zip";
+        /*
+        public const string NKM_ZIP_PATH = @"C:\logexport\logs_{0}.zip";
+        */
+        public const string NK_ZIP_PATH = @"C:\NativeKit\NativeApp\logs.zip";
+        /*
+        public const string NK_ZIP_PATH = @"C:\logexport\logs_{0}.zip";
+        */
+        public const string NKM_LOGS_PATH = @"C:\NativeKit\NKM\logs";
+        public const string NK_LOGS_PATH = @"C:\NativeKit\NativeApp\logs";
+        public const string SERVER_URL = @"https://localhost:3000/api/NativeKit/upload";
         public const string USER_NAME = "test";
         public const string PASSWORD = "test";
         
