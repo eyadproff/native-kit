@@ -154,7 +154,7 @@ namespace SignalRHost.Services
                 var mediaType = new MediaTypeHeaderValue("multipart/form-data");
                 
                 fileContent.Headers.ContentType = mediaType;
-                form.Add(fileContent, "file", Path.GetFileName(zipPath)+".zip");
+                form.Add(fileContent, "file", Path.GetFileName(zipPath));
                 var response = await client.PostAsync(url, form); 
                 response.EnsureSuccessStatusCode();
                 
@@ -188,7 +188,6 @@ namespace SignalRHost.Services
                 if (! Directory.Exists(logsPath)) return false;
                 copyFiles();
                 DeleteZipFile(zipPath);
-                //ZipFile.CreateFromDirectory(@"C:\logexport", String.Format(zipPath, DateTime.Now.Ticks));
                 ZipFile.CreateFromDirectory(@"C:\logexport", zipPath);
                 return true;
             }
@@ -198,7 +197,6 @@ namespace SignalRHost.Services
                 throw;
             }
         }
-
         private void copyFiles()
         {
             string fileName = "log20220228.txt";
