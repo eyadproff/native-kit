@@ -99,6 +99,8 @@ namespace SignalRHost.Hubs
                     camera.SetSetting(PropertyID.Evf_OutputDevice, (int)EvfOutputDevice.PC);
                     camera.SetSetting(PropertyID.ImageQuality, (int)ImageQuality.Small1JpegFine);
 
+                    
+                    
                     camera.SetCapacity(4096, int.MaxValue);
                     
                     camera.StartLiveView();

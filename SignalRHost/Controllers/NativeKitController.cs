@@ -4,8 +4,11 @@ using SignalRHost.Models;
 using SignalRHost.Services;
 using System;
 using System.Collections.Generic;
+using System.IO;
+using System.IO.Compression;
 using System.Linq;
 using System.Threading.Tasks;
+using SignalRHost.Utilities;
 
 namespace SignalRHost.Controllers
 {
@@ -23,6 +26,18 @@ namespace SignalRHost.Controllers
         public async Task<ActionResult<Devices>> DevicesConnected()
         {
             return await _services.DevicesConnected();
+        }
+
+        [HttpGet("logs")]
+        public Task<string> SendLogs()
+        {
+            return _services.SendLogs();
+        }
+
+        [HttpGet("health")]
+        public Task<string> Health()
+        {
+            return _services.Health();
         }
     }
 }
