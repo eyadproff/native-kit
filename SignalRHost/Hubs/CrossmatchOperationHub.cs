@@ -113,7 +113,6 @@ namespace SignalRHost.Hubs
                 try
                 {
                     biobDevice.RequestAcquisitionOverride();
-                    biobDevice.CancelAcquisition();
                     Clients.All.SendAsync(Constant.NK_STATUS, "Capture").Wait();
                 }
                 catch (Exception ex)

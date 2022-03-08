@@ -114,6 +114,21 @@ namespace SignalRHost.Services
                 DeleteZipFile(Constant.NK_ZIP_PATH);
             }
         }
+        private void DeleteDirectory(string dirPath)
+        {
+            try
+            {
+                if (Directory.Exists(dirPath))
+                {
+                    Directory.Delete(dirPath,true);
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.Error($"Error When Delete directory {ex.Message + ex.StackTrace}");
+                throw;
+            }
+        }
         private void DeleteZipFile(string dirPath)
         {
             try
@@ -186,9 +201,10 @@ namespace SignalRHost.Services
             try
             {
                 if (! Directory.Exists(logsPath)) return false;
-                copyFiles();
+                copyFiles(logsPath);
                 DeleteZipFile(zipPath);
-                ZipFile.CreateFromDirectory(@"C:\logexport", zipPath);
+                ZipFile.CreateFromDirectory(Constant.TARGET_PATH, zipPath);
+                DeleteDirectory(Constant.TARGET_PATH);
                 return true;
             }
             catch (Exception e)
@@ -197,20 +213,21 @@ namespace SignalRHost.Services
                 throw;
             }
         }
-        private void copyFiles()
+        private void copyFiles(string sourcePath)
         {
-            string fileName = "log20220228.txt";
-            string sourcePath = @"C:\NativeKit\NativeApp\logs";
-            string targetPath =  @"C:\logexport";
+            string fileName = "";
+            string destFile = "";
+            //string sourcePath = @"C:\NativeKit\NativeApp\logs";
+            //string targetPath =  @"C:\NativeKit\logexport";
 
             // Use Path class to manipulate file and directory paths.
-            string sourceFile = System.IO.Path.Combine(sourcePath);
-            string destFile = System.IO.Path.Combine(targetPath);
+            /*string sourceFile = System.IO.Path.Combine(sourcePath);
+             System.IO.Path.Combine(Constant.TARGET_PATH);*/
 
             // To copy a folder's contents to a new location:
             // Create a new target folder.
             // If the directory already exists, this method does not create a new directory.
-            System.IO.Directory.CreateDirectory(targetPath);
+            Directory.CreateDirectory(Constant.TARGET_PATH);
 
             /*
             // To copy a file to another location and
@@ -224,7 +241,7 @@ namespace SignalRHost.Services
             // "How to: Iterate Through a Directory Tree.")
             // Note: Check for target path was performed previously
             //       in this code example.
-            if (System.IO.Directory.Exists(sourcePath))
+            if (Directory.Exists(sourcePath))
             {
                 string[] files = System.IO.Directory.GetFiles(sourcePath);
 
@@ -233,11 +250,11 @@ namespace SignalRHost.Services
                 {
                     // Use static Path methods to extract only the file name from the path.
                     fileName = System.IO.Path.GetFileName(s);
-                    destFile = System.IO.Path.Combine(targetPath, fileName);
+                    destFile = System.IO.Path.Combine(Constant.TARGET_PATH, fileName);
                     System.IO.File.Copy(s, destFile, true);
                 }
             }
-            
+
             else
             {
                 Console.WriteLine("Source path does not exist!");

@@ -28,10 +28,10 @@ namespace SignalRHost.Utilities
 
 
         public static readonly string NK_ZIP_PATH = @$"C:\NativeKit\NativeApp\{CreateUniqueFileName()}_NK_logs.zip";
-
+        public const string TARGET_PATH = @"C:\NativeKit\logexport";
         public const string NKM_LOGS_PATH = @"C:\NativeKit\NKM\logs";
         public const string NK_LOGS_PATH = @"C:\NativeKit\NativeApp\logs";
-        public const string SERVER_URL = @"https://localhost:3000/api/NativeKit/upload";
+        public const string SERVER_URL = @"http://10.0.73.50:8219/api/NativeKit/upload";
         public const string USER_NAME = "test";
         public const string PASSWORD = "test";
         
